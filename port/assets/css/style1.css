@@ -17,15 +17,15 @@
 #contents {}
 #section1 {
     min-height: 100vh;
-    background: #FEE050 url(https://assets.website-files.com/5dbaec16f510ee7b1c0004d6/5dcc4ba7e654b268b33b59bb_homepage-wave-hero.svg) no-repeat center top;
+    background: #FEE050 url(../img/bg-blue.svg) no-repeat center top;
     background-size: cover;
 }
 #section1 svg {
     position: absolute; left: 0; top: 0;
 }
 #section2 {
-    height: 3000px;
-    background: url(../img/bg-yellow.png) no-repeat center top;
+    height: 250vh;
+    background: #FFFFFF url(../img/bg-yellow.svg) no-repeat center top;
     background-size: cover;
 }
 #section3 {}
@@ -55,20 +55,24 @@
 /* section2 */
 .sec2 {padding: 250px 0;}
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
-.sec2 .object {background: rgba(0,0,0,0.3); height: 75vh; position: relative;}
+.sec2 .object {height: 75vh; position: relative;}
 .sec2 .object img {position: absolute;}
 .sec2 .object img:first-child {top: 70px; left: 30%;}
 .sec2 .object img:nth-child(2) {top: 350px; left: 10%;}
-.sec2 .object img:last-child {top: 200px; left: 50%;}
-.sec2 .ability {background: rgba(0,0,0,0.2); height: 50vh; position: relative;}
+.sec2 .object img:nth-child(3) {top: 200px; left: 50%;}
+.sec2 .object img:nth-child(4) {top: 550px; left: 50%;}
+.sec2 .object img:nth-child(5) {top: 280px; left: 22%;}
+.sec2 .object img:nth-child(6) {top: 100px; right: 10%;}
+.sec2 .object img:nth-child(7) {top: 500px; right: 5%;}
+.sec2 .object img:nth-child(8) {top: 100px; left: 0;}
+.sec2 .object img:nth-child(9) {top: 550px; left: 35%;}
+.sec2 .object img:nth-child(10) {top: 60px; right: 2%;}
+.sec2 .ability {height: 60vh; position: relative;}
 .sec2 .ability ul {text-align: center; color: #19057A; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 30px;}
-.sec2 .ability li {float: left; width: 33.3333%; height: 30vh;}
-.sec2 .ability li img {}
-.sec2 .ability li span {}
-.sec2 .ability ul.row1 {}
-.sec2 .ability ul.row1 li {}
-.sec2 .ability ul.row2 {}
-.sec2 .ability ul.row2 li {}
+.sec2 .ability ul li {float: left; width: 28.5%; height: 20vh; top: 80px; position: relative;}
+.sec2 .ability ul:last-child li {float: right; top: 50px;}
+.sec2 .ability ul li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+.sec2 .ability ul li span {display: block; margin: 70px 0;}
 .sec2 .intro {color: #19057A;}
 .sec2 .intro ul {padding: 0 2%;}
 .sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
