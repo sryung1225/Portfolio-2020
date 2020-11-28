@@ -10,7 +10,7 @@ Site : [Portfolio](https://www.figma.com/file/phh8fsJ0C6cIjDICdZRjm5/Portfolio?n
 # Coding
 Date : 20.11.26 ~ ing <br>
 Tool : Brackets<br>
-Site : [RYUNG'S PORTFOLIO](http://sryung1225.dothome.co.kr/)<br>
+Site : [RYUNG'S PORTFOLIO](http://sryung1225.dothome.co.kr/port/index1.html)<br>
 <br>
 To Do <br>
 - [ ] layout
@@ -21,8 +21,7 @@ To Do <br>
 <br><br>
 
 Right Now To Do <br>
-- [ ] ability 퍼센티지 표현 찾아보기
-- [ ] about 오브젝트 파일화 하고 배치해보기
-- [ ] about 사진들 통째로 이미지로 쓰지말고 도형 이용해서 만들기
-- [ ] 가능하면 home 오브젝트들도 넣어보기
-- [ ] 파비콘 연동하기 
+- [ ] ability 퍼센티지 표현법 찾아보기
+- [ ] about 사진들 도형 이용해서 만들기
+- [ ] 가능하면 home 섹션 오브젝트들도 넣어보기
+- [ ]  works 섹션 스타트
