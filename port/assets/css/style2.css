@@ -1,3 +1,12 @@
+@font-face {
+    font-family: 'Cafe24Danjunghae'; 
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
+@font-face {
+    font-family: 'Cafe24Simplehae';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
 /* layout */
 #contents {}
 #section1 {
@@ -9,10 +18,16 @@
     position: absolute; left: 0; top: 0;
 }
 #section2 {
-    height: 1000px;
+    height: 2000px;
     background-color: #FEE050;
 }
-#section3 {}
+#section3 {
+    height: 5000px;
+    background-color: #fff;
+    background-image: url(../img/wave-blue.svg);
+    background-repeat: no-repeat;
+   
+}
 #section4 {}
 #section5 {}
 #section6 {}
@@ -53,9 +68,61 @@
 }
 
 
+/* sec3 */
+.sec3 {}
+.sec3 .title {
+    display: flex;
+    padding-top: 15vh;
+    justify-content: space-between;
+    align-items: flex-end
+}
+.sec3 .title h2 {
+    flex: 0 0 50%;
+    font-size: 80px;
+    font-family: 'Playfair Display', serif;
+    color: #fff;
+    text-align: left;
+    font-weight: 900;
+}
+.sec3 .title p {
+    flex: 0 0 30%;
+    font-family: 'Cafe24Simplehae';
+    font-size: 26px;
+    color: #fff; 
+}
+
+.site-wrap {margin-top: 30vh;}
+.site {}
+.site .top {padding: 5vw 5vw 3vw 0;}
+.site .top .view {
+    width: 80%;
+    height: 400px;
+    background: #fbce62;
+    border: 5px solid #19057A;
+    box-shadow: 30px 30px 0 0 #19057A;
+}
+
+.site .bot {height: 400px; display: flex}
+.site .bot .left {
+    flex: 0 0 50%;
+}
+.site .bot .left h3 {
+    color: #19057A;
+    font-family: 'Playfair Display', serif;
+    font-weight: 800;
+    font-size: 54px;
+}
+.site .bot .left p {
+    color: #8E8E8E;
+    font-family: 'Cafe24Simplehae';
+    font-size: 20px;
+    margin-top: 10px; 
+}
 
 
-
+.site .bot .right {
+    flex: 0 0 50%;
+}
 
 
 
