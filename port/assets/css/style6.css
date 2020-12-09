@@ -12,7 +12,6 @@
 /* font-family: 'Cafe24Danjunghae'; */
 /* font-family: 'Cafe24Simplehae'; */
  
- 
 /* layout */
 #nav {position: relative;}
 #contents {}
@@ -61,7 +60,7 @@
 .sec1 p.desc {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px;}
 
 /* section2 : about */
-.sec2 {padding: 250px 0;}
+.sec2 {padding-top: 250px;}
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
 .sec2 .object {height: 75vh; position: relative; --x: 0; --y: 0; --d: 50;}
 .sec2 .object .pt {
@@ -95,14 +94,44 @@
 .sec2 .object .s-3 {top: 60px; right: 2%;}
 .sec2 .object .s-4 {top: 1500px; left: 3%; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * 2px));}
 .sec2 .object .s-5 {top: 1200px; right: 3%; transform: translate(calc(var(--x) / var(--d) * -1px ), calc(var(--y) / var(--d) * -1px));}
-.sec2 .ability {height: 60vh; position: relative;}
-.sec2 .ability ul {text-align: center; color: #19057A; font-family: 'Playfair Display', serif; font-weight: 900; font-size: 30px;}
-.sec2 .ability ul li {float: left; width: 28.5%; height: 20vh; top: 80px; position: relative;}
-.sec2 .ability ul:last-child li {float: right; top: 50px;}
-.sec2 .ability ul li img {position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);}
-.sec2 .ability ul li span {display: block; margin: 70px 0;}
-.sec2 .intro {color: #19057A;}
-.sec2 .intro ul {padding: 0 2%;}
+
+.sec2 .cont {height: 40vh;}
+.sec2 .cont .left {float: left; width: 100%;}
+.sec2 .cont .right {}
+
+.sec2 .ability {position: relative; padding: 2%; margin: 10%;}
+.sec2 .ability > div {width: 100%; overflow: hidden; margin-bottom: 10px;}
+.sec2 .ability > div .progress-title {float: left; width: 14%; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; text-align: right;}
+.sec2 .ability > div .progress {float: left; width: 40%; top: 8px; background-color: #fff; height: 15px; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A; margin: 0 5%;}
+.sec2 .ability > div .progress-percent {float: left; width: 14%; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A;}
+.sec2 .ability > div .progress .progress-bar {animation: animate-positive 2s; position: relative; height: 15px; border-radius: 20px; background: #FD96B3;}
+.sec2 .ability > div .progress .progress-bar:after{
+    content:"";
+    position: absolute;
+    top: -12px;
+    right: 0px;
+    background: #fff;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    border:5px solid #19057A;
+}
+@-webkit-keyframes animate-positive {
+    0% { width: 5%; }
+}
+@keyframes animate-positive {
+    0% { width: 5%; }
+}
+
+
+
+
+
+
+
+
+.sec2 .intro {color: #19057A; height: 500px;}
+.sec2 .intro ul {padding: 0 2%; overflow: hidden;}
 .sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
 .sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4;}
 .sec2 .intro ul.que:after {content: ''; width: 5px; height: 410px; background: #fff; position: absolute; right: -2%; top: 0;}
