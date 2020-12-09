@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
 @font-face {font-family: 'Cafe24Danjunghae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal;}
 /* font-family: 'Playfair Display SC', serif; */
@@ -11,13 +12,13 @@
 /* font-family: 'Roboto', sans-serif; */
 /* font-family: 'Cafe24Danjunghae'; */
 /* font-family: 'Cafe24Simplehae'; */
- 
+
 /* layout */
 #nav {position: relative;}
 #contents {}
 #section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
 #section1 svg {position: absolute; left: 0; top: 0;}
-#section2 {height: 250vh; background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
+#section2 {background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
 #section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
 #section4 {height: 240vh; background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
 #section5 {height: 110vh; background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover;}
@@ -60,9 +61,9 @@
 .sec1 p.desc {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px;}
 
 /* section2 : about */
-.sec2 {padding-top: 250px;}
+.sec2 {padding: 250px 0;}
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
-.sec2 .object {height: 75vh; position: relative; --x: 0; --y: 0; --d: 50;}
+.sec2 .object {height: 750px; position: relative; --x: 0; --y: 0; --d: 50; margin-top: 30px;}
 .sec2 .object .pt {
     position: absolute;
     transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
@@ -95,46 +96,35 @@
 .sec2 .object .s-4 {top: 1500px; left: 3%; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * 2px));}
 .sec2 .object .s-5 {top: 1200px; right: 3%; transform: translate(calc(var(--x) / var(--d) * -1px ), calc(var(--y) / var(--d) * -1px));}
 
-.sec2 .cont {height: 40vh;}
-.sec2 .cont .left {float: left; width: 100%;}
-.sec2 .cont .right {}
+.sec2 .ment {/*background: url(../img/ment-cloud.png) no-repeat center center;*/ height: auto;}
+.sec2 .ment p {position: relative; padding: 90px 0; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
+.sec2 .ment p span {/*color: #FD96B3;*/}
+.sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
+.sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
 
-.sec2 .ability {position: relative; padding: 2%; margin: 10%;}
-.sec2 .ability > div {width: 100%; overflow: hidden; margin-bottom: 10px;}
-.sec2 .ability > div .progress-title {float: left; width: 14%; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; text-align: right;}
-.sec2 .ability > div .progress {float: left; width: 40%; top: 8px; background-color: #fff; height: 15px; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A; margin: 0 5%;}
-.sec2 .ability > div .progress-percent {float: left; width: 14%; font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A;}
-.sec2 .ability > div .progress .progress-bar {animation: animate-positive 2s; position: relative; height: 15px; border-radius: 20px; background: #FD96B3;}
-.sec2 .ability > div .progress .progress-bar:after{
-    content:"";
-    position: absolute;
-    top: -12px;
-    right: 0px;
-    background: #fff;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    border:5px solid #19057A;
-}
-@-webkit-keyframes animate-positive {
-    0% { width: 5%; }
-}
-@keyframes animate-positive {
-    0% { width: 5%; }
-}
-
-
-
-
-
-
-
-
-.sec2 .intro {color: #19057A; height: 500px;}
+.sec2 .intro {color: #19057A; height: 500px; margin: 50px 0; position: relative;}
 .sec2 .intro ul {padding: 0 2%; overflow: hidden;}
 .sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
 .sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4;}
-.sec2 .intro ul.que:after {content: ''; width: 5px; height: 410px; background: #fff; position: absolute; right: -2%; top: 0;}
+.sec2 .intro .line {width: 5px; height: 410px; background: #fff; position: absolute; float: left; left: 50%;}
+
+.sec2 .cont {height: 400px;}
+.sec2 .cont .ability {float: left; width: 50%;}
+.sec2 .cont .ability .ab {padding: 20px 150px;}
+.sec2 .cont .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
+.sec2 .cont .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
+.sec2 .cont .ability .ab .progress .progress-bar {animation: animate-positive 2s; position: relative; height: 15px; border-radius: 20px;}
+.sec2 .cont .ability .ab .progress .progress-bar:after{
+    content:'';
+    position: absolute; top: -12px; right: 0px;
+    background: #fff; height: 30px; width: 30px; border-radius: 50%; border:5px solid #19057A;
+}
+@-webkit-keyframes animate-positive {
+    0% {width: 5%;}
+}
+@keyframes animate-positive {
+    0% {width: 5%;}
+}
 
 /* section3 : works */
 .sec3 {}
@@ -151,7 +141,7 @@
 }
 .sec3 .title .object .b-1 {top: -50px; left: -200px; transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));}
 .sec3 .title .object .s-2 {top: -330px; left: -670px;}
-.sec3 .site-wrap {margin-top: 50vh;}
+.sec3 .site-wrap {padding-top: 200px;}
 .sec3 .site {margin: 250px 0; position: relative;}
 .sec3 .site strong {position: absolute; font-size: 450px; line-height: 1; color: rgba(0,0,0,0.1); right: -15px; top: 335px;}
 .sec3 .site .top {padding: 5vw 5vw 3vw 0;}
