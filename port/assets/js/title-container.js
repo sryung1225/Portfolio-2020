@@ -1,5 +1,6 @@
 const textContainers = [...document.querySelectorAll(".text-container")];
-const colorArray = ["#FD96B3", "#05B9CA", "#FEE050"];
+const colorArray = ["#FFF", "#FFF", "#FFF"];
+//const colorArray = ["#FD96B3", "#05B9CA", "#FEE050"];
 
 textContainers.forEach(container => {
 	let i = 0, j = 0;

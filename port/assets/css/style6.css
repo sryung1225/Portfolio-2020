@@ -47,7 +47,7 @@
 .sec1 .title-container .text-container .text .char-container {
     animation-name: tilt-up-down;
     animation-duration: 2000ms; animation-iteration-count: infinite; animation-timing-function: ease; animation-delay: var(--animation-delay);
-    z-index: 10; pointer-events: none; user-select: none; text-shadow: 8px 8px #0e0225;
+    z-index: 10; pointer-events: none; user-select: none; /* text-shadow: 8px 8px #0e0225; */
 }
 @keyframes tilt-up-down {
     0%, 100% {transform: translateY(0) rotate(0);}
@@ -61,7 +61,7 @@
 .sec1 p.desc {font-size: 20px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px;}
 
 /* section2 : about */
-.sec2 {padding: 250px 0;}
+.sec2 {padding: 250px 0 300px 0;}
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
 .sec2 .object {height: 750px; position: relative; --x: 0; --y: 0; --d: 50; margin-top: 30px;}
 .sec2 .object .pt {
@@ -105,16 +105,18 @@
 .sec2 .intro {color: #19057A; height: 500px; margin: 50px 0; position: relative;}
 .sec2 .intro ul {padding: 0 2%; overflow: hidden;}
 .sec2 .intro ul.que {float: left; text-align: right; width: 45%; font-family: 'Playfair Display', serif; font-size: 38px; font-weight: 900; line-height: 1.8; position: relative;}
-.sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4;}
+.sec2 .intro ul.ans {float: right; width: 45%; font-family: 'Cafe24Danjunghae'; font-size: 20px; line-height: 3.4em;}
 .sec2 .intro .line {width: 5px; height: 410px; background: #fff; position: absolute; float: left; left: 50%;}
 
-.sec2 .cont {height: 400px;}
-.sec2 .cont .ability {float: left; width: 50%;}
-.sec2 .cont .ability .ab {padding: 20px 150px;}
-.sec2 .cont .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
-.sec2 .cont .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
-.sec2 .cont .ability .ab .progress .progress-bar {animation: animate-positive 2s; position: relative; height: 15px; border-radius: 20px;}
-.sec2 .cont .ability .ab .progress .progress-bar:after{
+.sec2 .skill {height: 400px;}
+.sec2 .skill h3 {color: #19057A; text-align: center; font-size: 38px; font-family: 'Playfair Display', serif; font-weight: 900;}
+.sec2 .skill .ability {float: left; width: 50%;}
+.sec2 .skill .left .ab {padding: 20px 100px 20px 180px;}
+.sec2 .skill .right .ab {padding: 20px 180px 20px 100px;}
+.sec2 .skill .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
+.sec2 .skill .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
+.sec2 .skill .ability .ab .progress .progress-bar {animation: animate-positive 2s; position: relative; height: 15px; border-radius: 20px;}
+.sec2 .skill .ability .ab .progress .progress-bar:after{
     content:'';
     position: absolute; top: -12px; right: 0px;
     background: #fff; height: 30px; width: 30px; border-radius: 50%; border:5px solid #19057A;
@@ -190,7 +192,9 @@
     .container {width: 100%;}
 }
 @media (max-width: 1024px) {}
-@media (max-width: 960px) {}
+@media (max-width: 960px) {
+    .sec2 .intro ul.ans span {display: none;}
+}
 @media (max-width: 768px) {}
 @media (max-width: 600px) {}
 @media (max-width: 480px) {}
