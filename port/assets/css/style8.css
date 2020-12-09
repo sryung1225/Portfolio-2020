@@ -121,9 +121,6 @@
     position: absolute; top: -12px; right: 0px;
     background: #fff; height: 30px; width: 30px; border-radius: 50%; border:5px solid #19057A;
 }
-@-webkit-keyframes animate-positive {
-    0% {width: 5%;}
-}
 @keyframes animate-positive {
     0% {width: 5%;}
 }
@@ -145,6 +142,7 @@
 .sec3 .title .object .s-2 {top: -330px; left: -670px;}
 .sec3 .site-wrap {padding-top: 200px;}
 .sec3 .site {margin: 250px 0; height: 800px;}
+
 .sec3 .site .top {display: flex; justify-content: space-between; padding: 5vw 0 3vw 0;}
 .sec3 .site .top .view {width: 70%; height: 350px; background: #fbce62; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A; position: relative;}
 .sec3 .site .top .view img {position: absolute; left: 0; bottom: 0; width: 100%;}
@@ -154,14 +152,24 @@
 .sec3 .site .top .btn li a {display: inline-block; color: #19057A; width: 230px; padding: 15px 20px;}
 .sec3 .site .top .btn li a i {float: right; font-size: 22px;}
 .sec3 .site .top .btn li.mint {background: #05B9CA;}
-.sec3 .site .tpo .btn li.mint a {color: #fff;}
-.sec3 .site .bot {height: 500px; display: flex; margin-top: 50px;}
+.sec3 .site .top .btn li.mint a {color: #fff;}
+.sec3 .site .bot {height: 400px; display: flex; justify-content: space-between; margin-top: 50px;}
 .sec3 .site .bot .desc-box {width: 30%;}
 .sec3 .site .bot .desc-box h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 54px;}
 .sec3 .site .bot .desc-box .desc {color: #8E8E8E; font-family: 'Cafe24Simplehae'; font-size: 20px; margin-top: 10px;}
 .sec3 .site:after {content: ''; height: 5px; width: 430px; background: #19057A; position: absolute; left: 0; bottom: 0;}
-.sec3 .site .bot .tab-box {width: 70%;}
-
+.sec3 .site .bot .tab-box {width: 60%; overflow: hidden;}
+.sec3 .site .bot .tab-box .tab-btn {}
+.sec3 .site .bot .tab-box .tab-btn ul {overflow: hidden;}
+.sec3 .site .bot .tab-box .tab-btn li {float: left; width: calc(20% - 6px); margin-right: -5px; text-align: center;}
+.sec3 .site .bot .tab-box .tab-btn li a {display: block; font-size: 20px; font-family: 'Cafe24Danjunghae'; line-height: 2em; color: #19057A;}
+.sec3 .site .bot .tab-box .tab-btn li.active a {background: #19057A; color: #fff; border: 5px solid #19057A; border-radius: 5px 5px 0 0;}
+.sec3 .site .bot .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 320px; border-radius: 5px; background: #ffffff;}
+.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar {width: 10px; height: 10px;}
+.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-thumb {border-radius: 5px; background-color: #fff;}
+.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-corner {display: none;}
+.sec3 .site .bot .tab-box .tab-cont > div {display: none;}
+.sec3 .site .bot .tab-box .tab-cont > div:nth-child(1) {display: block;}
 
 .sec3 .si1 .top .view {background: #fbce62;}
 .sec3 .si2 .top .view {background: #b6ea7e;}
