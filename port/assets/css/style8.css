@@ -141,7 +141,7 @@
 .sec3 .title .object .b-1 {top: -50px; left: -200px; transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));}
 .sec3 .title .object .s-2 {top: -330px; left: -670px;}
 .sec3 .site-wrap {padding-top: 200px;}
-.sec3 .site {margin: 250px 0; height: 800px;}
+.sec3 .site {margin: 250px 0; height: auto;}
 
 .sec3 .site .top {display: flex; justify-content: space-between; padding: 5vw 0 3vw 0;}
 .sec3 .site .top .view {width: 70%; height: 350px; background: #fbce62; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A; position: relative;}
@@ -161,13 +161,13 @@
 .sec3 .site .bot .tab-box {width: 60%; overflow: hidden;}
 .sec3 .site .bot .tab-box .tab-btn {}
 .sec3 .site .bot .tab-box .tab-btn ul {overflow: hidden;}
-.sec3 .site .bot .tab-box .tab-btn li {float: left; width: calc(20% - 6px); margin-right: -5px; text-align: center;}
-.sec3 .site .bot .tab-box .tab-btn li a {display: block; font-size: 20px; font-family: 'Cafe24Danjunghae'; line-height: 2em; color: #19057A;}
-.sec3 .site .bot .tab-box .tab-btn li.active a {background: #19057A; color: #fff; border: 5px solid #19057A; border-radius: 5px 5px 0 0;}
-.sec3 .site .bot .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 320px; border-radius: 5px; background: #ffffff;}
-.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar {width: 10px; height: 10px;}
-.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-thumb {border-radius: 5px; background-color: #fff;}
-.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-corner {display: none;}
+.sec3 .site .bot .tab-box .tab-btn li {float: left; width: 20%; text-align: center;}
+.sec3 .site .bot .tab-box .tab-btn li a {display: block; font-size: 20px; line-height: 2.5em; font-family: 'Cafe24Danjunghae'; color: #19057A; transition: all 0.3s;}
+.sec3 .site .bot .tab-box .tab-btn li:hover a {color: #05B9CA;}
+.sec3 .site .bot .tab-box .tab-btn li.active a {background: #19057A; color: #fff; border-radius: 5px 5px 0 0;}
+.sec3 .site .bot .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 335px; border-radius: 5px; background: #ffffff; font-size: 15px;}
+.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar {width: 10px; height: 0;}
+.sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-thumb {background-color: #19057A;}
 .sec3 .site .bot .tab-box .tab-cont > div {display: none;}
 .sec3 .site .bot .tab-box .tab-cont > div:nth-child(1) {display: block;}
 
