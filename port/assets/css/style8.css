@@ -143,21 +143,21 @@
 .sec3 .site-wrap {padding-top: 200px;}
 .sec3 .site {margin: 250px 0; height: auto;}
 
-.sec3 .site .top {display: flex; justify-content: space-between; padding: 5vw 0 3vw 0;}
-.sec3 .site .top .view {width: 70%; height: 350px; background: #fbce62; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A; position: relative;}
+.sec3 .site .top {display: flex; padding: 5vw 0 3vw 0;}
+.sec3 .site .top .view {width: 70%; height: 350px; background: #f5f2f0; border: 5px solid #19057A; box-shadow: 30px 30px 0 0 #19057A; position: relative;}
 .sec3 .site .top .view img {position: absolute; left: 0; bottom: 0; width: 100%;}
-.sec3 .site .top .btn {width: 20%; position: relative;}
-.sec3 .site .top .btn ul {text-align: center; position: absolute; bottom: -43px;}
-.sec3 .site .top .btn li {font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; border: 5px solid #19057A; margin: 15px 0;}
-.sec3 .site .top .btn li a {display: inline-block; color: #19057A; width: 230px; padding: 15px 20px;}
-.sec3 .site .top .btn li a i {float: right; font-size: 22px;}
-.sec3 .site .top .btn li.mint {background: #05B9CA;}
+.sec3 .site .top .btn {width: 30%; position: relative;}
+.sec3 .site .top .btn ul {text-align: center; position: absolute; bottom: -45px;}
+.sec3 .site .top .btn li {font-family: 'Roboto', sans-serif; font-weight: bold; font-size: 18px; border: 5px solid #19057A; margin: 15px 0 15px -5px; width: 200px; background: #fff; transition: all 0.3s;}
+.sec3 .site .top .btn li a {display: inline-block; color: #19057A; padding: 15px 20px;}
+.sec3 .site .top .btn li a i {margin-left: 10px; font-size: 22px;}
+.sec3 .site .top .btn li.mint {background: #05B9CA; margin-left: 25px;}
 .sec3 .site .top .btn li.mint a {color: #fff;}
+.sec3 .site .top .btn li:hover {width: 230px;}
 .sec3 .site .bot {height: 400px; display: flex; justify-content: space-between; margin-top: 50px;}
 .sec3 .site .bot .desc-box {width: 30%;}
 .sec3 .site .bot .desc-box h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 54px;}
 .sec3 .site .bot .desc-box .desc {color: #8E8E8E; font-family: 'Cafe24Simplehae'; font-size: 20px; margin-top: 10px;}
-.sec3 .site:after {content: ''; height: 5px; width: 430px; background: #19057A; position: absolute; left: 0; bottom: 0;}
 .sec3 .site .bot .tab-box {width: 60%; overflow: hidden;}
 .sec3 .site .bot .tab-box .tab-btn {}
 .sec3 .site .bot .tab-box .tab-btn ul {overflow: hidden;}
@@ -165,16 +165,21 @@
 .sec3 .site .bot .tab-box .tab-btn li a {display: block; font-size: 20px; line-height: 2.5em; font-family: 'Cafe24Danjunghae'; color: #19057A; transition: all 0.3s;}
 .sec3 .site .bot .tab-box .tab-btn li:hover a {color: #05B9CA;}
 .sec3 .site .bot .tab-box .tab-btn li.active a {background: #19057A; color: #fff; border-radius: 5px 5px 0 0;}
-.sec3 .site .bot .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 335px; border-radius: 5px; background: #ffffff; font-size: 15px;}
+.sec3 .site .bot .tab-box .tab-cont {margin-top: -5px; border: 5px solid #19057A; overflow: scroll; height: 335px; border-radius: 5px; background: #f5f2f0; font-size: 15px;}
 .sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar {width: 10px; height: 0;}
 .sec3 .site .bot .tab-box .tab-cont::-webkit-scrollbar-thumb {background-color: #19057A;}
 .sec3 .site .bot .tab-box .tab-cont > div {display: none;}
 .sec3 .site .bot .tab-box .tab-cont > div:nth-child(1) {display: block;}
+.sec3 .site .line {width: 280px; height: 5px; background: #19057A;}
 
-.sec3 .si1 .top .view {background: #fbce62;}
-.sec3 .si2 .top .view {background: #b6ea7e;}
-.sec3 .si3 .top .view {background: #5eacfc;}
-.sec3 .si4 .top .view {background: #9567e4;}
+/*
+.sec3 .si1 .top .view {background: #4f94db;}
+.sec3 .si2 .top .view {background: #fbce62;}
+.sec3 .si3 .top .view {background: #e2e4e5;}
+.sec3 .si4 .top .view {background: #b6ea7e;}
+.sec3 .si5 .top .view {background: #5eacfc;}
+.sec3 .si6 .top .view {background: #9567e4;}
+*/
 
 /* section4 : animation */
 .sec4 {padding: 250px 0;}
