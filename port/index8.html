@@ -30,11 +30,11 @@
         </div>
         <div class="nav">
             <ul>
-                <li><a href="#">HOME</a></li>
-                <li><a href="#">ABOUT</a></li>
-                <li><a href="#">WORKS</a></li>
-                <li><a href="#">ANIMATION</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="#section1">HOME</a></li>
+                <li><a href="#section2">ABOUT</a></li>
+                <li><a href="#section3">WORKS</a></li>
+                <li><a href="#section4">ANIMATION</a></li>
+                <li><a href="#section5">CONTACT</a></li>
             </ul>
         </div>
         <div class="mNav">
@@ -55,6 +55,12 @@
 	                    <div class="text-container" data-text="Ryung's Portfolio"></div>
                     </div>
                     <p class="desc">WEB PUBLISHER / FRONT-END DEVELOPER</p>
+                    <div class="object">
+                        <img src="assets/img/object-big-10.svg" class="ob b-1">
+                        <img src="assets/img/object-small-9.svg" class="dot s-1">
+                        <img src="assets/img/object-small-10.svg" class="dot s-2">
+                        <img src="assets/img/object-small-11.svg" class="dot s-3">
+                    </div>
                 </div>
             </div>
         </section>
@@ -365,7 +371,7 @@
         <section id="section4">
             <div class="container">
                 <div class="sec4">
-                    <h2>Express<br>CSS Animation</h2>
+                    <h2>Express<br>Animation</h2>
                     <div class="ani ani-left">
                         <div class="anima an1">
                             <div class="ani-wrap">
@@ -380,7 +386,7 @@
                                 <div class="desc">
                                     <p>
                                         3D 정육면체 애니메이션 입니다<br>
-                                        perspective와 z축 활용으로 3D 도형을 연출했으며 여기에 keyframes을 이용해 스스로 회전하고 크기 변화를 갖도록 하였습니다.
+                                        perspective와 z축 활용으로 3D 도형을 연출했으며 여기에 keyframes를 이용해 스스로 회전하고 크기 변화를 갖도록 하였습니다.
                                     </p>
                                 </div>
                             </div>
@@ -388,15 +394,20 @@
                         </div>
                         <div class="anima an2">
                             <div class="ani-wrap">
-                                <div></div>
+                                <div class="glow">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
                                 <div class="desc">
                                     <p>
-                                        3D 정육면체 애니메이션 입니다<br>
-                                        perspective와 z축 활용으로 3D 도형을 연출했으며 여기에 keyframes을 이용해 스스로 회전하고 크기 변화를 갖도록 하였습니다.
+                                        빛을 내며 회전하는 원형 애니메이션 입니다<br>
+                                        filter: blur를 이용해 빛의 영역을 지정한 뒤 층층이 쌓아 올리고 여기에 keyframes를 이용해 스스로 회전하도록 하였습니다.
                                     </p>
                                 </div>
                             </div>
-                            <h3>CUBE</h3>
+                            <h3>GLOW</h3>
                         </div>
                         <div class="anima an3">
                             <div class="ani-wrap">
@@ -414,15 +425,17 @@
                     <div class="ani ani-right">
                         <div class="anima an4">
                             <div class="ani-wrap">
-                                <div></div>
+                                <div>
+                                    <div class="heart"></div>
+                                </div>
                                 <div class="desc">
                                     <p>
-                                        3D 정육면체 애니메이션 입니다<br>
-                                        perspective와 z축 활용으로 3D 도형을 연출했으며 여기에 keyframes을 이용해 스스로 회전하고 크기 변화를 갖도록 하였습니다.
+                                        두근대는 하트 애니메이션 입니다<br>
+                                        가상선택자를 사용하여 모양을 만들고 keyframes를 이용해 배경의 전환과 도형의 크기 변화를 갖도록 하였습니다.
                                     </p>
                                 </div>
                             </div>
-                            <h3>CUBE</h3>
+                            <h3>HEARTBEAT</h3>
                         </div>
                         <div class="anima an5">
                             <div class="ani-wrap">
@@ -456,14 +469,35 @@
         <section id="section5">
             <div class="container">
                 <div class="sec5">
-                    <h2>Contact Me<br>For More Talk!</h2>
-                    <form class="cform" id="contact-form" method="POST" action="https://formspree.io/sryung1225@gmail.com">
-                        <input type="email" name="email" placeholder="Your Email email">
-                        <textarea name="message" placeholder="Typing Your Message"></textarea>
-                        <button type="submit">SUBMIT</button>
-                    </form>
+                    <div class="contact">
+                        <div class="left">
+                            <form class="cform" id="contact-form" method="POST" action="https://formspree.io/meqprzbq">
+                                <input type="email" name="email" placeholder="Typing Your Email">
+                                <textarea name="message" placeholder="Typing Your Message"></textarea>
+                                <button type="submit">SUBMIT</button>
+                            </form>
+                        </div>
+                        <div class="right">
+                            <h2>Contact Me<br>For More Talk!</h2>
+                            <ul>
+                                <li><i class="fa fa-phone"></i>+82 1041819489</li>
+                                <li><i class="fa fa-envelope-o"></i>sryung1225@gmail.com</li>
+                                <li><i class="fa fa-instagram"></i>@__ryungsmas</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="object">
+                        <img src="assets/img/pencil.png" class="pencil" />
+                        <img src="assets/img/object-big-11.svg" class="ob b-1" />
+                        <img src="assets/img/object-big-12.svg" class="ob b-2" />
+                        <img src="assets/img/object-small-7.svg" class="dot s-1" />
+                        <img src="assets/img/object-small-8.svg" class="dot s-2" />
+                    </div>
                 </div>
             </div>
+            <svg width="952" height="165" viewBox="0 0 952 165" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M952 35.604C794.645 -67.9127 251.769 78.736 0 165H952V35.604Z" fill="#FD96B3"/>
+            </svg>
         </section><!-- //section5 : contact -->
     </div>
     <!-- //contents -->
