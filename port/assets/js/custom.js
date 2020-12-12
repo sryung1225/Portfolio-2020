@@ -13,3 +13,12 @@ $(".tab-btn > ul > li").click(function(e){
     $(".si"+num+" .bot .tab-box .tab-btn > ul > li").removeClass("active");
     $(".si"+num+" .bot .tab-box .tab-btn > ul > li").eq(index).addClass("active");
 });
+
+/* Parallax */
+$(window).scroll(function(){
+    let scroll = $(window).scrollTop();
+    if( scroll > $(".skill").offset().top - $(window).height() ){
+        $(".skill").addClass("show")
+    }
+
+});

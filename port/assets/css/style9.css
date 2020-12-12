@@ -18,18 +18,20 @@
 /* font-family: 'Cafe24Simplehae'; */
 
 /* ---------------------- layout ---------------------- */
+.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
 #nav {position: relative;}
 #contents {}
 #section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
-#section1 svg {position: absolute; left: 0; top: 0;}
+#section1 svg {position: absolute; left: 0; top: 0; animation: opening 1s linear;}
 #section2 {background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
 #section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
-#section4 {background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
+#section4 {background: #fff url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
 #section5 {background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover; position: relative;}
 #section5 svg {position: absolute; right: 0; bottom: 0;}
-
-/* ---------------------- container ---------------------- */
-.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+@keyframes opening {
+    0% {transform: translateY(-200px)}
+    100% {transform: translateY(0)}
+}
 
 /* ---------------------- nav ---------------------- */
 .logo {position: absolute; left: 20px; z-index: 10000; display: none;}
@@ -46,17 +48,34 @@
 
 /* ---------------------- section1 : home ---------------------- */
 .sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 90vh; flex-direction: column;}
-.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative;}
-.sec1 .title .rainbow {animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
-.sec1 .title .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s;}
-.sec1 .title .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s;}
-.sec1 .title .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s;}
-.sec1 .title .rainbow:nth-child(4) {color: #fff; position: absolute; top: 0; right: 9px;}
-@keyframes rainbow {
-    0%, 100% {transform: translateY(2rem);}
-    50% {transform: translateY(calc(2rem * -1));}
+.sec1 .word-container {position: relative; width: 100%; height: 300px; padding-top: 0; animation: title-slide 2s ease-in-out;}
+@keyframes title-slide {
+    0% {opacity: 0; transform: translateY(-800px);}
+    50% {opacity: 0; transform: translateY(-800px);}
+    100% {opacity: 1; transform: translateY(0);}
 }
-.sec1 p.desc {font-size: 25px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px; color: #fff;}
+.sec1 .word {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  font-family: 'Righteous', cursive; font-size: 200px; font-weight: 900; color: var(--color, #fff);
+  display: flex; pointer-events: none; user-select: none; line-height: 5.8rem;
+}
+.word .char {
+  position: relative; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);
+  transform: translateY(-45%) rotate(4deg);
+  animation: up-and-down 2s ease infinite;
+  animation-delay: calc((var(--word-index) * -0.15s) + (var(--char-index) * 0.1s));
+  z-index: calc(-1 * var(--char-index)); margin-left: -1.6rem;
+}
+@keyframes up-and-down {
+  0%, 100% {transform: translateY(-45%) rotate(4deg);}
+  50% {transform: translateY(45%) rotate(4deg);}
+}
+.sec1 p.desc {font-size: 25px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px; color: #fff; animation: basic 2.5s ease-in-out}
+@keyframes basic {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
 .sec1 .object {position: relative;}
 .sec1 .object > img {position: absolute;}
 .sec1 .object .ob {z-index: 10; animation: home-1 6s ease-in infinite;}
@@ -110,9 +129,8 @@
 .sec2 .object .s-4 {top: 1500px; left: 3%; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * 2px));}
 .sec2 .object .s-5 {top: 1200px; right: 3%; transform: translate(calc(var(--x) / var(--d) * -1px ), calc(var(--y) / var(--d) * -1px));}
 
-.sec2 .ment {/*background: url(../img/ment-cloud.png) no-repeat center center;*/ height: auto;}
+.sec2 .ment {height: auto;}
 .sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
-.sec2 .ment p span {/*color: #FD96B3;*/}
 .sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
 .sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
 
@@ -130,14 +148,10 @@
 .sec2 .skill .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
 .sec2 .skill .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
 .sec2 .skill .ability .ab .progress .progress-bar {position: relative; height: 15px; border-radius: 20px;}
-.sec2 .show .ability .ab .progress .progress-bar {animation: ability-progress 2s;}
 .sec2 .skill .ability .ab .progress .progress-bar:after{
     content:'';
     position: absolute; top: -12px; right: 0px;
     background: #fff; height: 30px; width: 30px; border-radius: 50%; border:5px solid #19057A;
-}
-@keyframes ability-progress {
-    0% {width: 5%;}
 }
 
 /* ---------------------- section3 : works ---------------------- */
@@ -175,7 +189,6 @@
 .sec3 .site .desc-box h3 {color: #19057A; font-family: 'Playfair Display', serif; font-weight: 800; font-size: 64px; line-height: 1; padding-bottom: 30px;}
 .sec3 .site .desc-box .desc {color: #8E8E8E; font-family: 'S-CoreDream-2ExtraLight'; font-size: 20px;}
 .sec3 .site .tab-box {width: 60%; overflow: hidden;}
-.sec3 .site .tab-box .tab-btn {}
 .sec3 .site .tab-box .tab-btn ul {overflow: hidden;}
 .sec3 .site .tab-box .tab-btn li {float: left; width: 20%; text-align: center;}
 .sec3 .site .tab-box .tab-btn li a {display: block; font-size: 20px; line-height: 2.5em; font-family: 'Cafe24Danjunghae'; color: #19057A; transition: all 0.3s;}
@@ -291,8 +304,6 @@
     75% {transform: scale(0.8) rotate(-45deg);}
 }
 
-
-
 /* ---------------------- section5 : contact ---------------------- */
 .sec5 {padding: 250px 0 140px 0;}
 .sec5 .contact {display: flex; align-items: center; justify-content: center; height: 900px;}
@@ -330,6 +341,29 @@
     25% {transform: translate(2px, 7px)}
     75% {transform: translate(-2px, -7px);}
 }
+
+/* ---------------------- parallax ---------------------- */
+.sec2 .object {opacity: 0; transform: translateY(300px); transition: 1s all;}
+.sec2 .object.show {opacity: 1; transform: translateY(0);}
+.sec2 .ment {opacity: 0; transition: 0.5s all;}
+.sec2 .ment.show {opacity: 1;}
+.sec2 .skills.show .ability .ab .progress .progress-bar {animation: ability-progress 2s;}
+@keyframes ability-progress {
+    0% {width: 5%;}
+}
+.sec3 .title h2 {transition: 0.5s all; opacity: 0;}
+.sec3 .title h2.show {opacity: 1;}
+.sec3 .title p {transition: 0.5s 0.5s all; opacity: 0;}
+.sec3 .title p.show {opacity: 1;}
+.sec3 .s1 .view {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site .view.show {opacity: 1; transform: translateX(0);}
+.sec3 .site .btn {opacity: 0; transform: translateX(100px); transition: 0.5s all;}
+.sec3 .site .btn.show {opacity: 1; transform: translateX(0);}
+.sec3 .site .desc-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 0.5s all;}
+.sec3 .site .desc-box.show {opacity: 1; transform: translateY(0);}
+.sec3 .site .tab-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 1s all;}
+.sec3 .site .tab-box.show {opacity: 1; transform: translateY(0);}
+
 
 /* ---------------------- media query ---------------------- */
 @media (max-width: 1280px) {
