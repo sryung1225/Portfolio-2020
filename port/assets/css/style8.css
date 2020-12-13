@@ -1,7 +1,6 @@
 @charset "utf-8";
 
 /* webfont */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
@@ -9,7 +8,6 @@
 @font-face {font-family: 'S-CoreDream-2ExtraLight'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-2ExtraLight.woff') format('woff'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'Cafe24Danjunghae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Danjunghae.woff') format('woff'); font-weight: normal; font-style: normal;}
 @font-face {font-family: 'Cafe24Simplehae'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.1/Cafe24Simplehae.woff') format('woff'); font-weight: normal; font-style: normal;}
-/* font-family: 'Playfair Display SC', serif; */
 /* font-family: 'Righteous', cursive; */
 /* font-family: 'Playfair Display', serif; */
 /* font-family: 'Roboto', sans-serif; */
@@ -21,12 +19,16 @@
 #nav {position: relative;}
 #contents {}
 #section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
-#section1 svg {position: absolute; left: 0; top: 0;}
+#section1 svg {position: absolute; left: 0; top: 0; animation: opening 1s linear;}
 #section2 {background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
 #section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
 #section4 {background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
 #section5 {background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover; position: relative;}
 #section5 svg {position: absolute; right: 0; bottom: 0;}
+@keyframes opening {
+    0% {transform: translateY(-200px)}
+    100% {transform: translateY(0)}
+}
 
 /* ---------------------- container ---------------------- */
 .container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
@@ -46,7 +48,12 @@
 
 /* ---------------------- section1 : home ---------------------- */
 .sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 90vh; flex-direction: column;}
-.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative;}
+.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative; animation: title-slide 2s ease-in-out;}
+@keyframes title-slide {
+    0% {opacity: 0; transform: translateY(-800px);}
+    50% {opacity: 0; transform: translateY(-800px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
 .sec1 .title .rainbow {animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
 .sec1 .title .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s;}
 .sec1 .title .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s;}
@@ -56,24 +63,29 @@
     0%, 100% {transform: translateY(2rem);}
     50% {transform: translateY(calc(2rem * -1));}
 }
-.sec1 p.desc {font-size: 25px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px; color: #fff;}
+.sec1 p.desc {font-size: 25px; font-family: 'Roboto', sans-serif; font-weight: 300; letter-spacing: 0.1px; color: #fff; animation: subtitle-show 2.5s ease-in-out;}
+@keyframes subtitle-show {
+    0% {opacity: 0;}
+    80% {opacity: 0;}
+    100% {opacity: 1;}
+}
 .sec1 .object {position: relative;}
 .sec1 .object > img {position: absolute;}
-.sec1 .object .ob {z-index: 10; animation: home-1 6s ease-in infinite;}
+.sec1 .object .ob {z-index: 10; animation: shake-1 6s ease-in infinite;}
 .sec1 .object .dot {z-index: 100;}
 .sec1 .object .b-1 {left: 400px; top: 0;}
-.sec1 .object .s-1 {right: 480px; top: -380px; animation: home-1 5s ease-in infinite;}
-.sec1 .object .s-2 {left: -20px; top: -250px; animation: home-2 3s ease-in infinite;}
-.sec1 .object .s-3 {left: 100px; top: -450px; animation: home-1 4s ease-in infinite;}
-@keyframes home-1 {
+.sec1 .object .s-1 {right: 480px; top: -380px; animation: shake-1 5s ease-in infinite;}
+.sec1 .object .s-2 {left: -20px; top: -250px; animation: shake-2 3s ease-in infinite;}
+.sec1 .object .s-3 {left: 100px; top: -450px; animation: shake-1 4s ease-in infinite;}
+@keyframes shake-1 {
     25% {transform: translate(-10px, 15px)}
     75% {transform: translate(10px, -15px);}
 }
-@keyframes home-2 {
+@keyframes shake-2 {
     25% {transform: translate(12px, 7px)}
     75% {transform: translate(-12px, -7px);}
 }
-
+ 
 /* ---------------------- section2 : about ---------------------- */
 .sec2 {padding: 250px 0 300px 0;}
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
@@ -91,26 +103,30 @@
 .sec2 .object .p-3 {top: 200px; left: 67%;}
 .sec2 .object .p-3 > img {position: absolute; width: 230px; height: 460px; border-radius: 0 230px 230px 0; transform: rotate(-27deg); top: -20px; left: -20px;}
 .sec2 .object .ob {
-    position: absolute; z-index: 10;
+    position: absolute; z-index: 20;
     transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
     transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));
 }
-.sec2 .object .b-1 {top: 550px; left: 50%;}
+.sec2 .object .b-1 {top: 550px; left: 50%; position: relative;}
+.sec2 .object .b-1:after {position: absolute; }
 .sec2 .object .b-2 {top: 280px; left: 22%;}
 .sec2 .object .b-3 {top: 100px; right: 10%;}
 .sec2 .object .b-4 {top: 500px; right: 5%;}
 .sec2 .object .dot {
-    position: absolute; z-index: 20;
+    position: absolute; z-index: 10;
     transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
     transform: translate(calc(var(--x) / var(--d) * 5px ), calc(var(--y) / var(--d) * 5px));
 }
 .sec2 .object .s-1 {top: 100px; left: 0;}
 .sec2 .object .s-2 {top: 550px; left: 35%;}
 .sec2 .object .s-3 {top: 60px; right: 2%;}
-.sec2 .object .s-4 {top: 1500px; left: 3%; transform: translate(calc(var(--x) / var(--d) * 2px ), calc(var(--y) / var(--d) * 2px));}
-.sec2 .object .s-5 {top: 1200px; right: 3%; transform: translate(calc(var(--x) / var(--d) * -1px ), calc(var(--y) / var(--d) * -1px));}
 
-.sec2 .ment {/*background: url(../img/ment-cloud.png) no-repeat center center;*/ height: auto;}
+.sec2 .object-fix {position: relative;}
+.sec2 .object-fix > img {position: absolute; z-index: 20;}
+.sec2 .object-fix .s-4 {top: 350px; left: -50px; animation: shake-1 4s ease-in infinite;}
+.sec2 .object-fix .s-5 {top: 700px; right: -50px; animation: shake-2 3s ease-in infinite;}
+
+.sec2 .ment {height: auto;}
 .sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
 .sec2 .ment p span {/*color: #FD96B3;*/}
 .sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
@@ -130,12 +146,30 @@
 .sec2 .skill .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
 .sec2 .skill .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
 .sec2 .skill .ability .ab .progress .progress-bar {position: relative; height: 15px; border-radius: 20px;}
-.sec2 .show .ability .ab .progress .progress-bar {animation: ability-progress 2s;}
 .sec2 .skill .ability .ab .progress .progress-bar:after{
     content:'';
     position: absolute; top: -12px; right: 0px;
-    background: #fff; height: 30px; width: 30px; border-radius: 50%; border:5px solid #19057A;
+    background: #fff; height: 30px; width: 30px; border-radius: 50%; border: 5px solid #19057A;
 }
+
+/* scroll */
+.sec2 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec2.show h2 {opacity: 1; transform: scale(1);}
+.sec2 .object {opacity: 0; transform: translateY(100px); transition: 1s 0.5s ease-in;}
+.sec2.show .object {opacity: 1; transform: translateY(0);}
+.sec2 .ment {opacity: 0; transition: 0.7s ease-in;}
+.sec2 .ment.show {opacity: 1;}
+.sec2 .ment span.name {opacity: 0; font-size: 30px; transition: 0.5s 1s ease-in;}
+.sec2 .ment span.job {opacity: 0; font-size: 30px; transition: 0.5s 1.5s ease-in;}
+.sec2 .ment.show span.name {opacity: 1; color: #05B9CA;}
+.sec2 .ment.show span.job {opacity: 1; color: #05B9CA;}
+.sec2 .intro {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .intro.show {opacity: 1;}
+.sec2 .skill h3 {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .skill.show h3 {opacity: 1;}
+.sec2 .skill .ability {opacity: 0; transition: 0.5s ease-in;}
+.sec2 .skill.show .ability {opacity: 1;}
+.sec2 .skill.show .ability .ab .progress .progress-bar {animation: ability-progress 2s ease-in;}
 @keyframes ability-progress {
     0% {width: 5%;}
 }
@@ -188,8 +222,25 @@
 .sec3 .site .tab-box .tab-cont > div:nth-child(1) {display: block;}
 .sec3 .site .line {width: 280px; height: 5px; background: #19057A;}
 
+/* scroll */
+.sec3 .title h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec3 .title.show h2 {opacity: 1; transform: scale(1);}
+.sec3 .title p {transition: 0.5s 0.5s all; opacity: 0;}
+.sec3 .title.show p {opacity: 1;}
+.sec3 .site .view {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site.show .view {opacity: 1; transform: translateX(0);}
+.sec3 .site .line {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site.show .line {opacity: 1; transform: translateX(0);}
+.sec3 .site .btn {opacity: 0; transform: translateX(100px); transition: 0.5s all;}
+.sec3 .site.show .btn {opacity: 1; transform: translateX(0);}
+.sec3 .site .desc-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 0.5s all;}
+.sec3 .site.show .desc-box {opacity: 1; transform: translateY(0);}
+.sec3 .site .tab-box {opacity: 0; transform: translateY(-100px); transition: 0.5s 1s all;}
+.sec3 .site.show .tab-box {opacity: 1; transform: translateY(0);}
+
+
 /* ---------------------- section4 : animation ---------------------- */
-.sec4 {padding: 250px 0 100px 0; overflow: hidden;}
+.sec4 {padding: 250px 0 100px 0; overflow: hidden; position: relative;}
 .sec4 h2 {color: #19057A; text-align: left; font-size: 80px; font-family: 'Playfair Display', serif; font-weight: 900; margin: 120px 0 70px 0;}
 .sec4 .ani .ani-wrap {display: inline-block; width: 440px; height: 370px; border: 5px solid #19057A; background: #fff; position: relative; box-shadow: 100px 100px 0 -75px #19057A; transition: all 1s;}
 .sec4 .ani .ani-wrap:hover {width: 600px;}
@@ -202,10 +253,11 @@
 .sec4 .ani-left .ani-wrap {margin: 30px 0px 30px 190px;}
 .sec4 .ani-left .ani-wrap:hover {margin-left: 30px;}
 .sec4 .ani-left h3 {margin-left: 190px;}
-.sec4 .ani-right {float: right; width: 50%; margin-top: -170px;}
+.sec4 .line {width: 5px; height: 1700px; background: #fff; position: absolute; float: left; left: 50%; bottom: 60px;}
+.sec4 .ani-right {float: right; width: calc(50% - 5px); margin-top: -170px;}
 .sec4 .ani-right .ani-wrap {margin: 30px 160px 30px 30px;}
 .sec4 .ani-right h3 {margin-left: 30px;}
-.sec4 .ani-left:after {content: ''; width: 5px; height: 1800px; background: #fff; position: absolute; left: 50%; top: 50%; transform: translateY(-50%);}
+
 
 /* an1 cube */
 .sec4 .ani .an1 .ani-wrap {
@@ -494,11 +546,19 @@
 .nose {position: absolute; width: 24%; height: 24%; background-color: #fff; z-index: 7; left: -12%; top: -3%; border-bottom-left-radius: 50% 88%; border-top-left-radius: 11% 43%; transform: rotate(12deg);}
 .nose:after {content: ''; position: absolute; width: 50%; height: 55%; background-color: #000; border-radius: 100%; left: -7%; top: -18%;}
 
-
+/* scroll */
+.sec4 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec4.show h2 {opacity: 1; transform: scale(1);}
+.sec4 .ani-left {opacity: 0; transform: translateX(30px); transition: 0.5s 1s ease-in;}
+.sec4 .ani-right {opacity: 0; transform: translateX(-30px); transition: 0.5s 1s ease-in;}
+.sec4.show .ani-left {opacity: 1; transform: translateX(0);}
+.sec4.show .ani-right {opacity: 1; transform: translateX(0);}
+.sec4 .line {opacity: 0; height: 0; transition: 0.5s 0.5s ease;}
+.sec4.show .line {opacity: 1; height: 1700px;}
 
 /* ---------------------- section5 : contact ---------------------- */
-.sec5 {padding: 250px 0 140px 0;}
-.sec5 .contact {display: flex; align-items: center; justify-content: center; height: 900px;}
+.sec5 {padding: 250px 0 110px 0;}
+.sec5 .contact {display: flex; align-items: center; justify-content: center; height: 870px;}
 .sec5 .left {flex: 0 0 55%; margin: 150px 30px 50px 30px;}
 .sec5 .left .cform {margin: 50px}
 .sec5 .left input {display: block; box-sizing: border-box; font-family: 'Roboto', sans-serif; font-style: italic; font-weight: 500; font-size: 20px; border: none; background: none; border-bottom: 5px solid #fff; width: 100%; height: 45px; padding: 5px 15px;}
@@ -513,7 +573,7 @@
 .sec5 .right li i {padding-right: 30px;}
 .sec5 .object {position: relative;}
 .sec5 .object > img {position: absolute;}
-.sec5 .object .pencil {z-index: 100; right: -150px; bottom: -75px; animation: pencil-shake 2s ease-in infinite;}
+.sec5 .object .pencil {z-index: 100; right: 0; bottom: 40px; animation: pencil-shake 2s ease-in infinite;}
 .sec5 .object .ob {z-index: 100;}
 .sec5 .object .dot {z-index: 10;}
 .sec5 .object .b-1 {left: 600px; bottom: 400px; animation: object-shake-2 5s ease-in infinite;}
@@ -533,6 +593,25 @@
     25% {transform: translate(2px, 7px)}
     75% {transform: translate(-2px, -7px);}
 }
+
+/* scroll */
+.sec5 h2 {opacity: 0; transform: scale(0.8); transition: 0.5s ease-in;}
+.sec5.show h2 {opacity: 1; transform: scale(1);}
+.sec5 .left {opacity: 0; transform: rotate(-10deg); transform-origin: left top;
+transition: 0.5s 0.5s ease-in;}
+.sec5.show .left {opacity: 1; transform: rotate(0);}
+.sec5 .right ul {opacity: 0; transform: translateY(-30px); transition: 0.5s 1s ease-in;}
+.sec5.show .right ul {opacity: 1; transform: translateY(0);}
+.sec5.show .pencil {animation: pencil-drop 1s ease, pencil-shake 2s 1s ease-in infinite;}
+@keyframes pencil-drop {
+    0% {opacity: 0; transform: translateY(-200px);}
+    40% {opacity: 1; transform: translateY(0);}
+    65% {opacity: 1; transform: translateY(-50px);}
+    80% {opacity: 1; transform: translateY(0);}
+    90% {opacity: 1; transform: translateY(-30px);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
 
 /* ---------------------- media query ---------------------- */
 @media (max-width: 1280px) {

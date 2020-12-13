@@ -355,7 +355,7 @@
 .sec3 .title h2.show {opacity: 1;}
 .sec3 .title p {transition: 0.5s 0.5s all; opacity: 0;}
 .sec3 .title p.show {opacity: 1;}
-.sec3 .s1 .view {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
+.sec3 .site .view {opacity: 0; transform: translateX(-100px); transition: 0.5s all;}
 .sec3 .site .view.show {opacity: 1; transform: translateX(0);}
 .sec3 .site .btn {opacity: 0; transform: translateX(100px); transition: 0.5s all;}
 .sec3 .site .btn.show {opacity: 1; transform: translateX(0);}
