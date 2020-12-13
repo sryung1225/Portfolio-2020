@@ -17,16 +17,15 @@ To Do <br>
 - [x] about html+css
 - [x] works html+css
 - [x] animation html+css
-- [ ] contact html+css
+- [x] contact html+css
 - [ ] menu side html+css 
 - [ ] responsive
 - [ ] parallax
-- [ ] animation
+- [x] animation
 <br><br>
 
 Right Now To Do <br>
 - [ ] works tab menu 채우기
 - [ ] works 설명 채우기
-- [ ] contact html+css 작업
-- [ ] animation 넣을거 만들기
-- [ ] home object 띄우기
+- [ ] 반응형 작업
+- [ ] parallax 작업
