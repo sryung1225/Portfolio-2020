@@ -1,0 +1,44 @@
+/* ---------------------- media query ---------------------- */
+@media (max-width: 1280px) {
+    .container {width: 100%;}
+}
+@media (max-width: 1024px) {
+    .nav ul {display: none;}
+    .sec2 .ment p {padding: 90px 100px;}
+    .sec2 .ment p:before {left: 15px;}
+    .sec2 .ment p:after {right: 15px;}
+    .sec2 .intro ul.ans span {display: none;}
+    .sec2 .skill .left .ab {padding: 20px 50px 20px 80px;}
+    .sec2 .skill .right .ab {padding: 20px 80px 20px 50px;}
+}
+@media (max-width: 960px) {
+    .sec2 .object .p-1 > img {width: 150px; height: 150px;}
+    .sec2 .object .p-2 > img {width: 240px; height: 240px;}
+    .sec2 .object .p-3 > img {width: 180px; height: 360px; border-radius: 0 180px 180px 0;}
+    .sec2 .object .ob {width: auto; height: 130px;}
+    .sec2 .intro ul.que {width: 45%;}
+    .sec2 .intro .line {left: 49%;}
+    .sec2 .intro ul.ans {float: left; width: 45%;}
+    .sec3 .title h2 {flex: 0 0 100%; text-align: center;}
+    .sec3 .title p {display: none;}
+}
+@media (max-width: 768px) {}
+@media (max-width: 600px) {
+    .sec2 .object {height: 600px;}
+    .sec2 .object .p-2 > img {width: 160px; height: 160px;}
+    .sec2 .object .p-3 > img {width: 120px; height: 240px; border-radius: 0 120px 120px 0;}
+    .sec2 .object .ob {display: none;}
+    .sec2 .object .s-1 {display: none;}
+    .sec2 .object .s-2 {display: none;}
+}
+@media (max-width: 480px) {
+    .sec2 h2 {font-size: 40px; padding: 0 33px;}
+    .sec2 .object {height: 500px;}
+    .sec2 .object .p-1 > img {width: 100px; height: 100px;}
+    .sec2 .object .p-2 > img {width: 130px; height: 130px;}
+    .sec2 .object .p-3 > img {width: 80px; height: 160px; border-radius: 0 80px 80px 0;}
+    .sec2 .ment p {padding: 20px; font-size: 16px;}
+    .sec2 .ment p:before {left: 5px; font-size: 40px;}
+    .sec2 .ment p:after {right: 5px; font-size: 40px;} 
+}
+@media (max-width: 360px) {} 
