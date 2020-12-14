@@ -9,6 +9,8 @@
 @media (max-width: 1500px) { /* 0 ~ 1500px */
     .container {width: 100%;}
     .sec2 .intro ul.ans li:nth-child(3) span {display: none;}
+    .sec3 .site-wrap {padding: 200px 20px 0 20px;}
+}
 
 @media (max-width: 1280px) { /* 0 ~ 1280px */
     .container {width: 100%;}
@@ -19,6 +21,10 @@
     .sec1 .object .s-2 {left: -290px; top: -185px;}
     .sec1 .object .s-3 {left: 0; top: -450px;}
     .sec2 .object-fix .s-5 {top: 750px; right: 0px;}
+    
+    .sec3 .title h2 {font-size: 60px;}
+    .sec3 .title p {font-size: 20px;}
+    .sec3 .site .desc-box .desc {font-size: 18px;}
 }
 
 @media (max-width: 1024px) { /* 0 ~ 1024px */
@@ -38,7 +44,12 @@
     .sec2 .intro ul.ans span {display: none;}
     .sec2 .skill .left .ab {padding: 20px 50px 20px 80px;}
     .sec2 .skill .right .ab {padding: 20px 80px 20px 50px;}
-}
+    
+    .sec3 .site .view {height: 300px; box-shadow: 25px 25px 0 0 #19057A;}
+    .sec3 .site .view img {width: 108%; transform: translateX(-4%);}
+    .sec3 .site .btn li {margin-bottom: 20px;}
+    .sec3 .site .btn li.mint {margin-left: 20px;}
+    .sec3 .site .desc-box h3 {font-size: 50px;}
 
 @media (max-width: 960px) { /* 0 ~ 960px */
     #section1 svg {transform: scale(0.7); animation: opening-7 1s linear; -webkit-animation: opening-7 1s linear;}
@@ -63,9 +74,8 @@
     .sec1 .object .b-2 {left: -400px; top: -800px; width: 300px;}
     .sec1 .object .s-1 {right: 130px; top: -800px;}
     .sec1 .object .s-2 {left: -300px; top: -400px;}
-    .sec1 .object .s-3 {left: 0; top: -450px;}
-    
-    .sec2 {padding: 150px 0 150px 0;}
+    .sec1 .object .s-3 {left: 0; top: -450px;} 
+    .sec2 {padding: 150px 0 250px 0;}
     .sec2 h2 {font-size: 50px;}
     .sec2 .object .p-1 > img {width: 180px; height: 180px;}
     .sec2 .object .p-2 > img {width: 240px; height: 240px;}
@@ -79,9 +89,19 @@
     .sec2 .intro ul.ans {float: left; width: 45%;}
     .sec2 .skill .left .ab {padding: 20px 80px;}
     .sec2 .skill .right .ab {padding: 20px 80px;}
-    .sec3 .title h2 {flex: 0 0 100%; text-align: center;}
-    .sec3 .title p {display: none;}
     
+    #section3 {background: #fff url(../img/wave-blue-2.svg) no-repeat center top;}
+    .sec3 .title {height: 214px;}
+    .sec3 .title h2 {flex: 0 0 100%; text-align: center; font-size: 60px;}
+    .sec3 .title p {display: none;}
+    .sec3 .title .object .b-1 {width: 180px; height: 180px;}
+    .sec3 .title .object .s-1 {top: -360px; left: -842px;}
+    .sec3 .site {margin: 50px 0 200px 0;}
+    .sec3 .site .btn li {width: 175px; font-size: 16px;}
+    .sec3 .site .btn li a {padding: 13px 10px;}
+    .sec3 .site .btn li:hover {width: 200px;}
+    .sec3 .site .desc-box .desc {font-size: 16px;}
+    .sec3 .site .line {display: none;}
 }
 
 @media (max-width: 768px) { /* 0 ~ 768px */
@@ -95,8 +115,7 @@
         100% {transform: translateY(0) scale(0.5);}
     }
     .sec1 .object .b-1 {left: 200px; top: -50px; width: 150px;}
-    .sec1 .object .b-2 {left: -300px; top: -650px; width: 200px;}
-    
+    .sec1 .object .b-2 {left: -300px; top: -650px; width: 200px;} 
     .sec2 .object {height: 700px;}
     .sec2 .object .p-1 {left: 20%;}
     .sec2 .object .p-1 > img {width: 150px; height: 150px;}
@@ -108,7 +127,7 @@
     .sec2 .object .b-4 {width: 150px;}
     .sec2 .object .s-1 {display: none;}
     .sec2 .object-fix .s-4 {top: 280px; left: 20px;}
-    .sec2 .object-fix .s-5 {top: 1122px; right: 10px;}
+    .sec2 .object-fix .s-5 {top: 1065px; right: 10px;}
     .sec2 .ment p {padding: 90px 50px; font-size: 20px;}
     .sec2 .ment p span {font-size: 22px;}
     .sec2 .intro {height: 400px;}
@@ -120,6 +139,15 @@
     .sec2 .skill .ability .progress-title {font-size: 21px;}
     .sec2 .skill .left .ab {padding: 20px 40px;}
     .sec2 .skill .right .ab {padding: 20px 40px;}
+    
+    .sec3 .title .object .s-1 {left: -714px;}
+    .sec3 .site .view {height: 200px; box-shadow: 20px 20px 0 0 #19057A;}
+    .sec3 .site .btn li {width: 150px; font-size: 14px; margin-bottom: 25px;}
+    .sec3 .site .btn li.mint {margin-left: 15px;}
+    .sec3 .site .btn li:hover {width: 170px;}
+    .sec3 .site .bot {height: auto;}
+    .sec3 .site .desc-box {width: 100%;}
+    .sec3 .site .tab-box {display: none;}
 }
 
 @media (max-width: 600px) { /* 0 ~ 600px */
@@ -135,8 +163,7 @@
     }
     .sec1 .title-mob {font-size: 140px;}
     .sec1 p.desc {font-size: 20px;}
-    
-    .sec2 {padding: 100px 0 150px 0;}
+    .sec2 {padding: 100px 0 250px 0;}
     .sec2 h2 {font-size: 40px; padding: 0 127px;}
     .sec2 .object {height: 600px;}
     .sec2 .object .p-2 {top: 300px; left: 10%;}
@@ -151,7 +178,24 @@
     .sec2 .intro {height: 300px;}
     .sec2 .intro ul.que {font-size: 25px;}
     .sec2 .intro ul.ans {font-size: 17px; line-height: 2.7em;}
-    .sec2 .intro .line {height: 276px;}
+    .sec2 .intro .line {height: 276px; width: 3px;}
+    .sec2 .skill .ability .progress {border: 3px solid #19057A;}
+    .sec2 .skill .ability .progress .progress-bar:after {border: 3px solid #19057A;}
+
+    .sec3 .title .object .s-1 {left: 540px;}
+    .sec3 .site .top {display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative;}
+    .sec3 .site .view {width: 90%; margin-left: -20px;}
+    .sec3 .site .view img {bottom: 12px;}
+    .sec3 .site .btn {position: static; height: 100px; width: 100%;}
+    .sec3 .site .btn ul {display: flex; justify-content: center; flex-direction: row; bottom: 0; width: 100%;}
+    .sec3 .site .btn li {flex: 0 0 45%; margin: 0;}
+    .sec3 .site .btn li:hover {background: #FEE050;}
+    .sec3 .site .btn li a {padding: 9px 10px;}
+    .sec3 .site .btn li a i {font-size: 17px;}
+    .sec3 .site .bot {margin-top: 30px;}
+    .sec3 .site .desc-box {text-align: center;}
+    .sec3 .site .desc-box h3 {font-size: 40px;}
+    .sec3 .site .desc-box .desc {font-size: 14px;}
 }
 
 @media (max-width: 480px) { /* 0 ~ 480px */
@@ -173,17 +217,20 @@
     .sec2 .object .b-3 {width: 80px;}
     .sec2 .object .s-2 {display: block; top: 30px; width: 300px;}
     .sec2 .object .s-3 {top: 278px; left: 19px; width: 300px;}
-    .sec2 .ment p {padding: 50px 30px; font-size: 15px;}
-    .sec2 .ment p span {font-size: 17px;}
+    .sec2 .ment p {padding: 50px 30px; font-size: 16px;}
+    .sec2 .ment p span {font-size: 18px;}
     .sec2 .ment p:before {left: 5px; font-size: 60px;}
     .sec2 .ment p:after {right: 5px; font-size: 60px;}
     .sec2 .intro ul.que {font-size: 21px;}
     .sec2 .intro ul.ans {font-size: 13px; line-height: 2.9em;}
-    .sec2 .intro .line {height: 230px; width: 3px;}
+    .sec2 .intro .line {height: 230px;}
     .sec2 .skill {height: 270px;}
     .sec2 .skill h3 {font-size: 30px;}
     .sec2 .skill .left .ab {padding: 20px;}
     .sec2 .skill .right .ab {padding: 20px;}
+    
+    .sec3 .title h2 {font-size: 40px;}
+    .sec3 .site .desc-box .desc {font-size: 12px;}
 }
 @media (max-width: 360px) {
     .sec2 h2 {padding: 0;}

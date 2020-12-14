@@ -148,7 +148,7 @@
 .sec2 .object-fix .s-5 {top: 700px; right: -50px; animation: shake-2 3s ease-in infinite;}
 
 .sec2 .ment {height: auto;}
-.sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
+.sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'S-CoreDream-2ExtraLight'; font-weight: 900;}
 .sec2 .ment p span {font-size: 30px; color: #05B9CA;}
 .sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
 .sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
@@ -199,7 +199,6 @@
 }
 
 /* ---------------------- section3 : works ---------------------- */
-.sec3 {}
 .sec3 .title {display: flex; justify-content: space-between; align-items: flex-end; position: relative; height: 340px;}
 .sec3 .title h2 {flex: 0 0 50%; font-size: 80px; font-family: 'Playfair Display', serif; color: #fff; text-align: left; font-weight: 900;}
 .sec3 .title p {flex: 0 0 50%; font-size: 25px; font-family: 'S-CoreDream-2ExtraLight'; color: #fff;}
@@ -212,7 +211,7 @@
     transform: translate(calc(var(--x) / var(--d) * 3px ), calc(var(--y) / var(--d) * 3px));
 }
 .sec3 .title .object .b-1 {top: -40px; left: -200px; transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));}
-.sec3 .title .object .s-2 {top: -330px; left: -670px;}
+.sec3 .title .object .s-1 {top: -330px; left: -670px;}
 .sec3 .site-wrap {padding-top: 200px;}
 .sec3 .site {margin: 250px 0; height: auto;}
 
