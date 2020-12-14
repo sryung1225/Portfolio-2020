@@ -1,9 +1,22 @@
 /* ---------------------- media query ---------------------- */
+/*#section1,
+#section2, */
+#section3,
+#section4,
+#section5 {display: none;}
+
+
 @media (max-width: 1280px) {
     .container {width: 100%;}
+    .sec1 .title {font-size: 180px;}
+    .sec1 .object .b-1 {left: 300px; top: -40px;}
+    .sec1 .object .s-1 {right: 180px; top: -380px;}
+    .sec1 .object .s-2 {left: -290px; top: -185px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;}
+    
 }
 @media (max-width: 1024px) {
-    .nav ul {display: none;}
+    .sec1 .title {font-size: 150px;}
     .sec2 .ment p {padding: 90px 100px;}
     .sec2 .ment p:before {left: 15px;}
     .sec2 .ment p:after {right: 15px;}
@@ -12,6 +25,21 @@
     .sec2 .skill .right .ab {padding: 20px 80px 20px 50px;}
 }
 @media (max-width: 960px) {
+    .nav ul {display: none;}
+    .sec1 .title {display: none;}
+    .sec1 .title-mob {display: block; font-size: 200px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative;}
+    .sec1 .title-mob .rainbow {animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
+    .sec1 .title-mob .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s;}
+    .sec1 .title-mob .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s;}
+    .sec1 .title-mob .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s;}
+    .sec1 .title-mob .rainbow:nth-child(4) {color: #fff; position: absolute; top: 0; right: 9px;}
+    .sec1 p.desc {padding-top: 50px;}
+    .sec1 .object .b-1 {left: 200px; top: -100px;}
+    .sec1 .object .s-1 {right: 130px; top: -800px;}
+    .sec1 .object .s-2 {left: -300px; top: -300px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;}
+    
+    
     .sec2 .object .p-1 > img {width: 150px; height: 150px;}
     .sec2 .object .p-2 > img {width: 240px; height: 240px;}
     .sec2 .object .p-3 > img {width: 180px; height: 360px; border-radius: 0 180px 180px 0;}
@@ -22,8 +50,13 @@
     .sec3 .title h2 {flex: 0 0 100%; text-align: center;}
     .sec3 .title p {display: none;}
 }
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+    .sec1 .title-mob {font-size: 180px;}
+}
 @media (max-width: 600px) {
+    .sec1 .title-mob {font-size: 140px;}
+    .sec1 p.desc {font-size: 20px;}
+
     .sec2 .object {height: 600px;}
     .sec2 .object .p-2 > img {width: 160px; height: 160px;}
     .sec2 .object .p-3 > img {width: 120px; height: 240px; border-radius: 0 120px 120px 0;}
@@ -32,6 +65,9 @@
     .sec2 .object .s-2 {display: none;}
 }
 @media (max-width: 480px) {
+    .sec1 .title-mob {font-size: 110px;}
+    .sec1 p.desc {font-size: 15px;}
+
     .sec2 h2 {font-size: 40px; padding: 0 33px;}
     .sec2 .object {height: 500px;}
     .sec2 .object .p-1 > img {width: 100px; height: 100px;}

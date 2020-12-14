@@ -25,7 +25,7 @@
 }
 
 /* ---------------------- container ---------------------- */
-.container {width: 1400px; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
+.container {width: 1400px; overflow: hidden; margin: 0 auto; position: relative; /* background: rgba(0,0,0,0.3); */}
 
 /* ---------------------- nav ---------------------- */
 .logo {position: absolute; left: 20px; z-index: 10000; display: none;}
@@ -41,8 +41,9 @@
 .mNav .ham span:after {content: ''; width: 25px; height: 3px; background: #fff; position: absolute; left: 0; bottom: -8px;}
 
 /* ---------------------- section1 : home ---------------------- */
-.sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 90vh; flex-direction: column;}
-.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative; animation: title-slide 2s ease-in-out;}
+.sec1 {text-align: center; color: #fff; display: flex; align-items: center; justify-content: center; height: 100vh; flex-direction: column;}
+.sec1 .title-mob {display: none; z-index: 1000; animation: title-slide 2s ease-in-out;}
+.sec1 .title {font-size: 200px; font-weight: 900; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out;}
 @keyframes title-slide {
     0% {opacity: 0; transform: translateY(-800px);}
     50% {opacity: 0; transform: translateY(-800px);}
@@ -67,8 +68,8 @@
 .sec1 .object > img {position: absolute;}
 .sec1 .object .ob {z-index: 10; animation: shake-1 6s ease-in infinite;}
 .sec1 .object .dot {z-index: 100;}
-.sec1 .object .b-1 {left: 400px; top: 0;}
-.sec1 .object .s-1 {right: 480px; top: -380px; animation: shake-1 5s ease-in infinite;}
+.sec1 .object .b-1 {left: 400px; top: -40px;}
+.sec1 .object .s-1 {right: 380px; top: -380px; animation: shake-1 5s ease-in infinite;}
 .sec1 .object .s-2 {left: -20px; top: -250px; animation: shake-2 3s ease-in infinite;}
 .sec1 .object .s-3 {left: 100px; top: -450px; animation: shake-1 4s ease-in infinite;}
 @keyframes shake-1 {
