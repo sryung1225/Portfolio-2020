@@ -14,7 +14,7 @@
 #contents {}
 #section1 {min-height: 100vh; background: #FEE050 url(../img/bg-blue.svg) no-repeat center top; background-size: cover;}
 #section1 svg {position: absolute; left: 0; top: 0; animation: opening 1s linear; -webkit-animation: opening 1s linear;}
-#section2 {background: #FEE050 url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
+#section2 {background: #19057A url(../img/bg-yellow.svg) no-repeat center top; background-size: cover;}
 #section3 {background: #fff url(../img/wave-blue.svg) no-repeat center top;}
 #section4 {background: url(../img/bg-gray.svg) no-repeat center top; background-size: cover;}
 #section5 {background: #F2F2F2 url(../img/bg-mint.svg) no-repeat center top; background-size: cover; position: relative;}
@@ -113,7 +113,7 @@
 .sec2 h2 {color: #19057A; text-align: center; font-size: 70px; font-family: 'Playfair Display', serif; font-weight: 900;}
 .sec2 .object {height: 750px; position: relative; --x: 0; --y: 0; --d: 50; margin-top: 30px;}
 .sec2 .object .pt {
-    position: absolute;
+    position: absolute; z-index: 15;
     transition: transform 500ms cubic-bezier(0.25, 0.46, 0.45, 0.84);
     transform: translate(calc(var(--x) / var(--d) * 1px ), calc(var(--y) / var(--d) * 1px));
 }
@@ -130,7 +130,6 @@
     transform: translate(calc(var(--x) / var(--d) * -2px ), calc(var(--y) / var(--d) * -2px));
 }
 .sec2 .object .b-1 {top: 550px; left: 50%; position: relative;}
-.sec2 .object .b-1:after {position: absolute; }
 .sec2 .object .b-2 {top: 280px; left: 22%;}
 .sec2 .object .b-3 {top: 100px; right: 10%;}
 .sec2 .object .b-4 {top: 500px; right: 5%;}
@@ -150,7 +149,7 @@
 
 .sec2 .ment {height: auto;}
 .sec2 .ment p {position: relative; padding: 90px 230px; text-align: center; color: #19057A; font-size: 26px; font-family: 'Cafe24Simplehae'; font-weight: 900;}
-.sec2 .ment p span {/*color: #FD96B3;*/}
+.sec2 .ment p span {font-size: 30px; color: #05B9CA;}
 .sec2 .ment p:before {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; transform: rotate(180deg); top: 10px; left: 150px;}
 .sec2 .ment p:after {position: absolute; content: ',,'; font-family: 'Palanquin', sans-serif; font-size: 200px; bottom: 10px; right: 150px;}
 
@@ -165,10 +164,10 @@
 .sec2 .skill .ability {float: left; width: 50%;}
 .sec2 .skill .left .ab {padding: 20px 100px 20px 180px;}
 .sec2 .skill .right .ab {padding: 20px 180px 20px 100px;}
-.sec2 .skill .ability .ab .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
-.sec2 .skill .ability .ab .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
-.sec2 .skill .ability .ab .progress .progress-bar {position: relative; height: 15px; border-radius: 20px;}
-.sec2 .skill .ability .ab .progress .progress-bar:after{
+.sec2 .skill .ability .progress-title {font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 900; color: #19057A; padding-bottom: 10px;}
+.sec2 .skill .ability .progress {background-color: #fff; position: relative; border-radius: 20px; box-shadow: 5px 5px 0 0 #19057A; border: 5px solid #19057A;}
+.sec2 .skill .ability .progress .progress-bar {position: relative; height: 15px; border-radius: 20px;}
+.sec2 .skill .ability .progress .progress-bar:after{
     content:'';
     position: absolute; top: -12px; right: 0px;
     background: #fff; height: 30px; width: 30px; border-radius: 50%; border: 5px solid #19057A;
@@ -181,8 +180,8 @@
 .sec2.show .object {opacity: 1; transform: translateY(0);}
 .sec2 .ment {opacity: 0; transition: 0.7s ease-in;}
 .sec2 .ment.show {opacity: 1;}
-.sec2 .ment span.name {opacity: 0; font-size: 30px; transition: 0.5s 1s ease-in;}
-.sec2 .ment span.job {opacity: 0; font-size: 30px; transition: 0.5s 1.5s ease-in;}
+.sec2 .ment span.name {opacity: 0; transition: 0.5s 1s ease-in;}
+.sec2 .ment span.job {opacity: 0; transition: 0.5s 1.5s ease-in;}
 .sec2 .ment.show span.name {opacity: 1; color: #05B9CA;}
 .sec2 .ment.show span.job {opacity: 1; color: #05B9CA;}
 .sec2 .intro {opacity: 0; transition: 0.5s ease-in;}
