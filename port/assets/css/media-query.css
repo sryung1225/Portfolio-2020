@@ -1,21 +1,31 @@
-/* ---------------------- media query ---------------------- */
-/*#section1,
-#section2, */
+/* ---------------------- media query ---------------------- 
+#section1,
+#section2,
 #section3,
 #section4,
-#section5 {display: none;}
+#section5 {display: none;} */
 
 
-@media (max-width: 1280px) {
+@media (max-width: 1280px) { /* 0 ~ 1280px */
     .container {width: 100%;}
     .sec1 .title {font-size: 180px;}
     .sec1 .object .b-1 {left: 300px; top: -40px;}
+    .sec1 .object .b-2 {left: -600px; top: -700px;}
     .sec1 .object .s-1 {right: 180px; top: -380px;}
     .sec1 .object .s-2 {left: -290px; top: -185px;}
     .sec1 .object .s-3 {left: 0; top: -450px;}
-    
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1024px) { /* 0 ~ 1024px */
+    #section1 svg {transform-origin: left top; transform: scale(0.8); animation: opening-8 1s linear; -webkit-animation: opening-8 1s linear;}
+    @keyframes opening-8 {
+        0% {transform: translateY(-200px) scale(0.8);}
+        100% {transform: translateY(0) scale(0.8);}
+    }
+    -webkit-@keyframes opening-8 {
+        0% {transform: translateY(-200px) scale(0.8);}
+        100% {transform: translateY(0) scale(0.8);}
+    }
     .sec1 .title {font-size: 150px;}
     .sec2 .ment p {padding: 90px 100px;}
     .sec2 .ment p:before {left: 15px;}
@@ -24,22 +34,34 @@
     .sec2 .skill .left .ab {padding: 20px 50px 20px 80px;}
     .sec2 .skill .right .ab {padding: 20px 80px 20px 50px;}
 }
-@media (max-width: 960px) {
+
+@media (max-width: 960px) { /* 0 ~ 960px */
+    #section1 svg {transform: scale(0.7); animation: opening-7 1s linear; -webkit-animation: opening-7 1s linear;}
+    @keyframes opening-7 {
+        0% {transform: translateY(-200px) scale(0.7);}
+        100% {transform: translateY(0) scale(0.7);}
+    }
+    -webkit-@keyframes opening-7 {
+        0% {transform: translateY(-200px) scale(0.7);}
+        100% {transform: translateY(0) scale(0.7);}
+    }
     .nav ul {display: none;}
     .sec1 .title {display: none;}
-    .sec1 .title-mob {display: block; font-size: 200px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative;}
-    .sec1 .title-mob .rainbow {animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
-    .sec1 .title-mob .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s;}
-    .sec1 .title-mob .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s;}
-    .sec1 .title-mob .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s;}
+    .sec1 .title-mob {display: block; font-size: 180px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out;}
+    .sec1 .title-mob .rainbow {-webkit-animation: rainbow 1.5s ease-in-out infinite; animation: rainbow 1.5s ease-in-out infinite; -webkit-animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
+    .sec1 .title-mob .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s; -webkit-animation-delay: 0.5s;}
+    .sec1 .title-mob .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s; -webkit-animation-delay: 0.4s;}
+    .sec1 .title-mob .rainbow:nth-child(3) {color: #05B9CA; position: absolute; top: 0; right: 6px; animation-delay: 0.3s; -webkit-animation-delay: 0.3s;}
     .sec1 .title-mob .rainbow:nth-child(4) {color: #fff; position: absolute; top: 0; right: 9px;}
     .sec1 p.desc {padding-top: 50px;}
-    .sec1 .object .b-1 {left: 200px; top: -100px;}
+    .sec1 .object .b-1 {left: 200px; top: -100px; width: 200px;}
+    .sec1 .object .b-2 {left: -400px; top: -800px; width: 300px;}
     .sec1 .object .s-1 {right: 130px; top: -800px;}
-    .sec1 .object .s-2 {left: -300px; top: -300px;}
+    .sec1 .object .s-2 {left: -300px; top: -400px;}
     .sec1 .object .s-3 {left: 0; top: -450px;}
     
-    
+    .sec2 {padding: 150px 0 150px 0;}
+    .sec2 h2 {font-size: 50px;}
     .sec2 .object .p-1 > img {width: 150px; height: 150px;}
     .sec2 .object .p-2 > img {width: 240px; height: 240px;}
     .sec2 .object .p-3 > img {width: 180px; height: 360px; border-radius: 0 180px 180px 0;}
@@ -50,22 +72,50 @@
     .sec3 .title h2 {flex: 0 0 100%; text-align: center;}
     .sec3 .title p {display: none;}
 }
-@media (max-width: 768px) {
-    .sec1 .title-mob {font-size: 180px;}
+
+@media (max-width: 768px) { /* 0 ~ 768px */
+    #section1 svg {transform: scale(0.5); animation: opening-5 1s linear; -webkit-animation: opening-5 1s linear;}
+    @keyframes opening-5 {
+        0% {transform: translateY(-200px) scale(0.5);}
+        100% {transform: translateY(0) scale(0.5);}
+    }
+    -webkit-@keyframes opening-5 {
+        0% {transform: translateY(-200px) scale(0.5);}
+        100% {transform: translateY(0) scale(0.5);}
+    }
+    .sec1 .object .b-1 {left: 200px; top: -50px; width: 150px;}
+    .sec1 .object .b-2 {left: -300px; top: -650px; width: 200px;}
 }
-@media (max-width: 600px) {
+
+@media (max-width: 600px) { /* 0 ~ 600px */
+    .mNav {top: 10px; right: 10px;}
+    #section1 svg {transform: scale(0.3); animation: opening-3 1s linear; -webkit-animation: opening-3 1s linear;}
+    @keyframes opening-3 {
+        0% {transform: translateY(-200px) scale(0.3);}
+        100% {transform: translateY(0) scale(0.3);}
+    }
+    -webkit-@keyframes opening-3 {
+        0% {transform: translateY(-200px) scale(0.3);}
+        100% {transform: translateY(0) scale(0.3);}
+    }
     .sec1 .title-mob {font-size: 140px;}
     .sec1 p.desc {font-size: 20px;}
-
+    
+    .sec2 {padding: 100px 0 150px 0;}
+    .sec2 h2 {font-size: 40px; margin: 0 30px;}
     .sec2 .object {height: 600px;}
     .sec2 .object .p-2 > img {width: 160px; height: 160px;}
     .sec2 .object .p-3 > img {width: 120px; height: 240px; border-radius: 0 120px 120px 0;}
-    .sec2 .object .ob {display: none;}
-    .sec2 .object .s-1 {display: none;}
-    .sec2 .object .s-2 {display: none;}
+    .sec2 .object .s-3 {display: none;}
 }
-@media (max-width: 480px) {
+
+@media (max-width: 480px) { /* 0 ~ 480px */
     .sec1 .title-mob {font-size: 110px;}
+    .sec1 .object .b-1 {left: 142px; top: -44px; width: 100px;}
+    .sec1 .object .b-2 {left: -227px; top: -450px; width: 150px;}
+    .sec1 .object .s-1 {right: 130px; top: -800px;}
+    .sec1 .object .s-2 {left: -655px; top: -400px;}
+    .sec1 .object .s-3 {left: 0; top: -450px;}
     .sec1 p.desc {font-size: 15px;}
 
     .sec2 h2 {font-size: 40px; padding: 0 33px;}
