@@ -1,3 +1,4 @@
+@charset "utf-8";
 /* ---------------------- media query ---------------------- */
 /* #section1,
  #section2,
@@ -25,6 +26,7 @@
 
 @media (max-width: 1280px) { /* 0 ~ 1280px */
     .container {width: 100%;}
+    .mNav .menu .left li {font-size: 70px;}
     .sec1 .title {font-size: 180px;}
     .sec1 .object .b-1 {left: 300px; top: -40px;}
     .sec1 .object .b-2 {left: -600px; top: -700px;}
@@ -64,7 +66,6 @@
     .sec3 .site .btn li.mint {margin-left: 20px;}
     .sec3 .site .desc-box h3 {font-size: 50px;}
     .sec4 .ani .ani-wrap .desc p {padding: 100px 0 20px 0; font-size: 18px;}
-    
     #section5 svg {transform-origin: right bottom; transform: scale(0.8);}
 }
 
@@ -79,8 +80,12 @@
         100% {transform: translateY(0) scale(0.7);}
     }
     .nav ul {display: none;}
+    .mNav .menu .left {width: 100%;}
+    .mNav .menu .left li.mob {display: inline-block; padding-right: 30px;}
+    .mNav .menu .left li.mob a:hover {color: #FEE050;}
+    .mNav .menu .right {display: none;}
     .sec1 .title {display: none;}
-    .sec1 .title-mob {display: block; font-size: 180px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out;}
+    .sec1 .title-mob {display: block; font-size: 150px; font-weight: 900; line-height: 1.2em; font-family: 'Righteous', cursive; position: relative; z-index: 1000; animation: title-slide 2s ease-in-out; z-index: 500;}
     .sec1 .title-mob .rainbow {-webkit-animation: rainbow 1.5s ease-in-out infinite; animation: rainbow 1.5s ease-in-out infinite; -webkit-animation: rainbow 1.5s ease-in-out infinite; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 10px 10px 0 rgba(0,0,0,0.2);}
     .sec1 .title-mob .rainbow:nth-child(1) {color: #FEE050; z-index: 10; animation-delay: 0.5s; -webkit-animation-delay: 0.5s;}
     .sec1 .title-mob .rainbow:nth-child(2) {color: #FD96B3; position: absolute; top: 0; right: 3px; animation-delay: 0.4s; -webkit-animation-delay: 0.4s;}
@@ -119,18 +124,20 @@
     .sec3 .site .desc-box .desc {font-size: 16px;}
     .sec3 .site .line {display: none;}
     
-    .sec4 {position: static; padding: 100px 0 0 0;}
+    .sec4 {position: static; padding: 100px 0 0 0; display: flex; justify-content: center; align-items: center; flex-direction: column;}
     .sec4 .line {display: none;}
-    .sec4 .ani {position: static; margin: 20px; width: calc(100% - 40px); transition: 0.5s 1s ease-in;}
-    .sec4 .ani .ani-wrap {margin: 0; width: 100%; height: 300px;}
-    .sec4 .ani .ani-wrap:hover {margin: 0; width: 100%; float: none;}
+    .sec4 .ani .ani-wrap {margin: 0; width: calc(100% - 10px); height: 300px; box-shadow: 100px 100px 0 -75px #19057A;}
     .sec4 .ani .ani-wrap .desc p {padding: 75px 0 20px 0; font-size: 16px;}
     .sec4 .ani h3 {margin: 0; width: 100%; line-height: 2.2em;}
-    .sec4 .ani-left {transition: none;}
-    .sec4 .ani-right {transition: none;}
-    .sec4.show .ani-left {opacity: 1; transform: translateX(0);}
+    .sec4 .ani-left {position: static; width: 80%; box-sizing: border-box; transition: none; margin: 0;}
+    .sec4 .ani-left .ani-wrap {margin: 0;}
+    .sec4 .ani-left .ani-wrap:hover {width: calc(100% - 10px); margin: 0;}
+    .sec4 .ani-right {position: static; width: 80%; box-sizing: border-box; transition: none; margin: 0;}
+    .sec4 .ani-right .ani-wrap {margin: 0;}
+    .sec4 .ani-right .ani-wrap:hover {width: calc(100% - 10px); margin: 0;}
+    .sec4.show .ani-left {float: none; opacity: 1; transform: translateX(0);}
     .sec4.show .ani-right {opacity: 1; transform: translateX(0);}
-    .sec4 .ani .anima {margin-bottom: 40px; opacity: 0; transform: translateX(-30px);}
+    .sec4 .ani .anima {float: none; margin-bottom: 40px; opacity: 0;}
     .sec4.show .ani .anima {opacity: 1; transform: translateX(0);}
     
     #section5 svg {transform-origin: right bottom; transform: scale(0.7);}
@@ -138,8 +145,11 @@
     .sec5 {padding: 100px 0 50px 0;}
     .sec5 .left {margin: 20px;}
     .sec5 .right {margin: 20px;}
+    .sec5 .right h2 {font-size: 50px;}
     .sec5 .object .pencil {width: 260px;}
     .sec5 .object .b-1 {left: 384px;}
+    .sec5 .object .s-1 {left: 5px; bottom: 370px;}
+    .sec5 .object .s-2 {display: none;}
 }
 
 @media (max-width: 768px) { /* 0 ~ 768px */
@@ -178,7 +188,7 @@
     .sec2 .skill .left .ab {padding: 20px 40px;}
     .sec2 .skill .right .ab {padding: 20px 40px;}
     
-    .sec3 .title .object .s-1 {left: -714px;}
+    .sec3 .title .object .s-1 {left: -645px;}
     .sec3 .site .view {height: 200px; box-shadow: 20px 20px 0 0 #19057A;}
     .sec3 .site .btn li {width: 150px; font-size: 14px; margin-bottom: 25px;}
     .sec3 .site .btn li.mint {margin-left: 15px;}
@@ -197,6 +207,7 @@
 
 @media (max-width: 600px) { /* 0 ~ 600px */
     .mNav {top: 10px; right: 10px;}
+    .mNav .menu .left li {font-size: 60px;}
     #section1 svg {transform: scale(0.3); animation: opening-3 1s linear; -webkit-animation: opening-3 1s linear;}
     @keyframes opening-3 {
         0% {transform: translateY(-200px) scale(0.3);}
@@ -206,7 +217,8 @@
         0% {transform: translateY(-200px) scale(0.3);}
         100% {transform: translateY(0) scale(0.3);}
     }
-    .sec1 .title-mob {font-size: 140px;}
+    .sec1 .title-mob {font-size: 120px;}
+    .sec1 .title-mob .rainbow {text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000, 5px 5px 0 rgba(0,0,0,0.2);}
     .sec1 p.desc {font-size: 20px;}
     .sec2 {padding: 100px 0 250px 0;}
     .sec2 h2 {font-size: 40px; padding: 0 127px;}
@@ -226,7 +238,8 @@
     .sec2 .intro .line {height: 276px; width: 3px;}
     .sec2 .skill .ability .progress {border: 3px solid #19057A;}
     .sec2 .skill .ability .progress .progress-bar:after {border: 3px solid #19057A;}
-    .sec3 .title .object .s-1 {left: 540px;}
+    .sec3 .title .object .b-1 {width: 263px;}
+    .sec3 .title .object .s-1 {left: -500px; top: -370px;}
     .sec3 .site .top {display: flex; justify-content: center; align-items: center; flex-direction: column; position: relative;}
     .sec3 .site .view {width: 90%; margin-left: -20px;}
     .sec3 .site .view img {bottom: 12px;}
@@ -241,10 +254,13 @@
     .sec3 .site .desc-box h3 {font-size: 40px;}
     .sec3 .site .desc-box .desc {font-size: 14px;}
     .sec4 {padding: 0;}
+    .sec5 .right h2 {font-size: 40px;}
+    .sec5 .right ul {font-size: 18px;}
 }
 
 @media (max-width: 480px) { /* 0 ~ 480px */
-    .sec1 .title-mob {font-size: 110px;}
+    .mNav .menu .left li {font-size: 40px;}
+    .sec1 .title-mob {font-size: 80px;}
     .sec1 .object .b-1 {left: 142px; top: -44px; width: 100px;}
     .sec1 .object .b-2 {left: -227px; top: -450px; width: 150px;}
     .sec1 .object .s-1 {right: 130px; top: -800px;}
@@ -262,8 +278,9 @@
     .sec2 .object .b-3 {width: 80px;}
     .sec2 .object .s-2 {display: block; top: 30px; width: 300px;}
     .sec2 .object .s-3 {top: 278px; left: 19px; width: 300px;}
-    .sec2 .ment p {padding: 50px 30px; font-size: 16px;}
-    .sec2 .ment p span {font-size: 18px;}
+    .sec2 .object-fix .s-5 {display: none;}
+    .sec2 .ment p {padding: 50px 30px; font-size: 14px;}
+    .sec2 .ment p span {font-size: 15px;}
     .sec2 .ment p:before {left: 5px; font-size: 60px;}
     .sec2 .ment p:after {right: 5px; font-size: 60px;}
     .sec2 .intro ul.que {font-size: 21px;}
@@ -274,9 +291,20 @@
     .sec2 .skill .left .ab {padding: 20px;}
     .sec2 .skill .right .ab {padding: 20px;}
     
-    .sec3 .title h2 {font-size: 40px;}
+    .sec3 .title .object .s-1 {left: -378px; top: -370px;}
+    .sec3 .title h2 {font-size: 40px; margin-bottom: 20px;}
     .sec3 .site .desc-box .desc {font-size: 12px;}
+    
+    .sec4 .ani {margin: 0 70px; width: calc(100% - 140px);}
+    .sec4 .ani .ani-wrap {height: 250px; box-shadow: 50px 50px 0 -33px #19057A;}
+    
+    .sec5 .contact {height: 400px;}
+    .sec5 .right ul {font-size: 15px;}
+    .sec5 .object .pencil {width: 120px; bottom: -30px;}
+    .sec5 .object .b-1 {left: 332px; width: 70px;}
+    .sec5 .object .b-2 {width: 70px;}
+    .sec5 .object .s-3 display: none;}
 }
 @media (max-width: 360px) {
-    .sec2 h2 {padding: 0;}
+    .sec2 .right h2 {padding: 0;}
 } 
