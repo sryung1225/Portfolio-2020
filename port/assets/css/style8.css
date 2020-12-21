@@ -197,6 +197,12 @@
 .sec2.show h2 {opacity: 1; transform: scale(1);}
 .sec2 .object {opacity: 0; transform: translateY(100px); transition: 1s 0.5s ease-in;}
 .sec2.show .object {opacity: 1; transform: translateY(0);}
+.sec2 .object .p-1 > img {opacity: 0; transform: rotate(-10deg); transition: 0.2s 1.9s ease-in;}
+.sec2.show .object .p-1 > img {opacity: 1; transform: rotate(0);}
+.sec2 .object .p-2 > img {opacity: 0; transform: rotate(5deg); transition: 0.2s 1.5s ease-in;}
+.sec2.show .object .p-2 > img {opacity: 1; transform: rotate(0);}
+.sec2 .object .p-3 > img {opacity: 0; transform: rotate(-3deg); transition: 0.2s 1.7s ease-in;}
+.sec2.show .object .p-3 > img {opacity: 1; transform: rotate(0);}
 .sec2 .ment {opacity: 0; transition: 0.7s ease-in;}
 .sec2 .ment.show {opacity: 1;}
 .sec2 .ment span.name {opacity: 0; transition: 0.5s 1s ease-in;}
