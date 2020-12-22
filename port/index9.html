@@ -841,23 +841,70 @@ IR 효과의 기법 3가지
                                     <p class="desc">
                                         영화관 메가박스의 기업 사이트입니다.<br>
                                         원 사이트를 참고해 레이아웃을 재구성했으며 반응형으로 이루어져 있습니다.
-                                        동적 효과를 위해 jQuery 플러그인들과 SVG 활용법, 마우스 오버 이펙트 등을 사용했습니다.
-                                    </p>
+                                        미디어쿼리를 적극 활용하고 동적 효과를 위해 jQuery 플러그인들과 마우스 오버 이펙트 등을 사용했습니다.                                    </p>
                                 </div>
                                 <div class="tab-box">
                                     <div class="tab-btn">
                                         <ul>
                                             <li class="active"><a href="#">레이아웃</a></li>
                                             <li><a href="#">이미지 최적화</a></li>
-                                            <li><a href="#">탭메뉴3</a></li>
+                                            <li><a href="#">탭 메뉴</a></li>
                                             <li><a href="#">Youtube API</a></li>
                                         </ul>
                                     </div>
                                     <div class="tab-cont">
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 상세 설명 준비 중입니다 */
-                                            
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-html">/* html */
+&lt;header id="header"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="header"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/header&gt;
+&lt;section id="banner"&gt;
+    &lt;div class="banner-menu"&gt;&lt;/div&gt;
+    &lt;div class="banner-slider"&gt;&lt;/div&gt;
+&lt;/section&gt;    
+&lt;section id="movie"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="movie"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="event"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="event"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="opening"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="opening"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="new"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="new"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;section id="help"&gt;
+    &lt;div class="container"&gt;
+        &lt;div class="row"&gt;
+            &lt;div class="help"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/section&gt;
+&lt;footer id="footer"&gt;
+    &lt;div class="footer_sns"&gt;&lt;/div&gt;
+    &lt;div class="footer_infor"&gt;&lt;/div&gt;
+&lt;/footer&gt;</code></pre>
                                         </div>
                                         <div>
                                             <pre class="line-numbers language-js"><code class="language-css">미디어 쿼리를 이용한 이미지 해상도 조절
@@ -874,9 +921,23 @@ IR 효과의 기법 3가지
 }</code></pre>
                                         </div>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 3번 */
-                                                
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-js">/* script */
+var tabMenu = $(".notice"); // 기준점 설정
+
+tabMenu.find("ul > li > ul").hide();
+tabMenu.find("ul > li.active > ul").show(); // 기본적으로 active가 붙어있는 공지1만 눈에 보이도록
+
+function tabList(e){
+    e.preventDefault();
+    var target = $(this);
+	target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
+    // 버튼(a)을 클릭하면 옆에 있는 형제(ul)를 보여주고
+    // 형제의 부모(li)를 찾아 클래스에 active를 추가
+    // 부모(li)의 형제(다른 li)를 찾아 클래스에 active를 제거
+    // 부모의 형제(다른 li)의 자식(ul)을 찾아 숨김
+}
+
+tabMenu.find("ul > li > a").click(tabList).focus(tabList); // a(버튼)를 찾아 누르고 tabList 함수 실행</code></pre>
                                         </div>
                                         <div>
                                             <pre class="line-numbers language-css"><code class="language-js">/* 트레일러 영상 플레이어를 활성화 */
@@ -992,38 +1053,183 @@ IR 효과의 기법 3가지
                                     <p class="desc">
                                         건축사 디자인웍스의 기업 사이트입니다.<br>
                                         웹 표준에 준수하여 반응형으로 이루어져 있습니다.
-                                        페이지 스크롤 효과를 위한 velocity.js 플러그인을 중심으로 제작되어 있으며 서브페이지가 존재합니다.
+                                        페이지 스크롤 효과를 위한 velocity.js 플러그인을 중심으로 레이아웃이 구성되어 있으며 Hiring 서브페이지가 존재합니다.
                                     </p>
                                 </div>
                                 <div class="tab-box">
                                     <div class="tab-btn">
                                         <ul>
-                                            <li class="active"><a href="#">탭메뉴1</a></li>
-                                            <li><a href="#">탭메뉴2</a></li>
-                                            <li><a href="#">탭메뉴3</a></li>
-                                            <li><a href="#">탭메뉴4</a></li>
+                                            <li class="active"><a href="#">레이아웃</a></li>
+                                            <li><a href="#">햄버거 버튼</a></li>
+                                            <li><a href="#">가로 스크롤 탭메뉴</a></li>
+                                            <li><a href="#">CSS 애니메이션</a></li>
                                         </ul>
                                     </div>
                                     <div class="tab-cont">
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 상세 설명 준비 중입니다 */
-                                            
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-html">/* html */
+&lt;div class="container"&gt;
+    &lt;section class="cd-section visible">
+        &lt;div class="content"&gt;Section 1&lt;/div&gt;
+    &lt;/section>&gt;
+    &lt;section class="cd-section">
+        &lt;div class="content"&gt;Section 2&lt;/div&gt;
+    &lt;/section>&gt;
+    &lt;section class="cd-section">
+        &lt;div class="content"&gt;Section 3&lt;/div&gt;
+    &lt;/section>&gt;
+    &lt;section class="cd-section">
+        &lt;div class="content"&gt;Section 3&lt;/div&gt;
+    &lt;/section>&gt;
+    
+    &lt;header&gt;
+        &lt;div class="gnb-inner"&gt;
+            &lt;div class="logo"&gt;&lt;/div&gt;
+            &lt;div class="gnb"&gt;
+                &lt;div class="menu"&gt;&lt;/div&gt;
+                &lt;div class="slogan"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;  
+    &lt;/header&gt;
+&lt;/div&gt;
+
+&lt;nav&gt;
+    &lt;ul class="cd-vertical-nav"&gt;&lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
                                         </div>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 2번 */
-                                            
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-css">/* html */
+&lt;div class="trigger"&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+/* style */
+.trigger {display: block; width: 24px; height: 14px; position: absolute; right: 20px; top: 20px;}
+.trigger span {position: absolute; height: 1px; width: 100%; background-color: #000; transition: 0.5s;}
+.trigger span:nth-child(1) {top: 0;}
+.trigger span:nth-child(2) {top: 50%; width: 80%;}
+.trigger span:nth-child(3) {top: 100%;}
+.trigger.active span:nth-child(1) {top: 50%; transform: rotate(45deg);}
+.trigger.active span:nth-child(2) {opacity: 0;}
+.trigger.active span:nth-child(3) {top: 50%; transform: rotate(-45deg)}
+                                           
+/* script */                                            
+$('.trigger').click(function () {
+    $(this).toggleClass('active')
+})
+$('section, .menu a').click(function () {
+    $('.trigger').removeClass('active')
+})</code></pre>
                                         </div>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 3번 */
-                                            
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-css">/* html */
+&lt;div class="project-inner"&gt;
+    &lt;input type="radio" name="tabmenu" id="tab1" checked&gt;
+    &lt;input type="radio" name="tabmenu" id="tab2"&gt;
+    &lt;input type="radio" name="tabmenu" id="tab3"&gt;
+    &lt;div class="tabs"&gt;
+        &lt;div class="tab"&gt;
+            &lt;div class="project-info"&gt;&lt;/div&gt;
+            &lt;div class="project-photo"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="tab"&gt;
+            &lt;div class="project-info"&gt;&lt;/div&gt;
+            &lt;div class="project-photo"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="tab"&gt;
+            &lt;div class="project-info"&gt;&lt;/div&gt;
+            &lt;div class="project-photo"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="btn"&gt;
+        &lt;label for="tab1"&gt;tab1&lt;/label&gt;
+        &lt;label for="tab2"&gt;tab2&lt;/label&gt;
+        &lt;label for="tab3"&gt;tab3&lt;/label&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+/* style */
+body {height: 100vh; margin: 0;}
+* {box-sizing: border-box;}
+.project-inner {height: 100%;}
+
+.tabs {
+    border: 5px solid orange;
+    height: 100%;
+    width: 300%;
+    transition: 0.5s;
+}
+.tab {
+    height: 100%;
+    border: 5px solid yellow;
+    float: left;
+    width: 33.333333%;
+}
+.tab > div {
+    height: 100%;
+    float: left;
+}
+.project-info {
+    border: 5px solid lightgreen;
+    width: 25%;
+}
+.project-photo {
+    border: 5px solid purple;
+    width: 75%;
+}
+input[name=tabmenu] {
+    display: none;
+}
+.btn {
+    border: 2px solid #000;
+    position: absolute;
+    left: 30px;
+    bottom: 30px;
+}
+.btn label {
+    cursor: pointer;
+}
+
+/* input 선택됐을 때 label 표시 효과 */
+input[id=tab1]:checked~.btn label[for=tab1] {color: red;}
+input[id=tab2]:checked~.btn label[for=tab2] {color: red;}
+input[id=tab3]:checked~.btn label[for=tab3] {color: red;}
+
+/* input 선택됐을 때 tab 스크롤 효과 */
+input[id=tab1]:checked~.tabs {margin-left: 0;}
+input[id=tab2]:checked~.tabs {margin-left: -100%;} /* 좌로 이동 */
+input[id=tab3]:checked~.tabs {margin-left: -200%;} /* 좌로 이동 */</code></pre>
                                         </div>
                                         <div>
-                                            <pre class="line-numbers"><code class="language-js"> /* 4번 */
-                                            
-                                            </code></pre>
+                                            <pre class="line-numbers"><code class="language-css">CSS 애니메이션의 구성 요소
+- @keyframes : 어떤 애니메이션을 동작할지 keyframes로 제작
+- animation : 제작한 애니메이션 적용
+                                           
+div {
+	animation: 애니메이션명 지속시간 (시작딜레이:0s) 애니메이션타입 (무한반복:infinite);
+	animation-fill-mode: both; /* 100%에서 0% 모습으로 다시 돌아가는 속성 무시 (=100% 모습 유지하며 종료)*/
+	/* animation: slide 2s ease-in-out both; 로 한 줄 표현 가능 */
+}
+@keyframes 애니메이션명 {
+	0% {css;} /* 처음: 0% */
+	50% {css;}
+	100% {css;} /* 마지막 : 100% */
+}
+                                       
+- 예시) 밑에서 위로 올라오기
+.welcome-text {
+	animation: slideup 2s linear;
+    animation-fill-mode: both;
+}
+
+@keyframes slideup {
+    0% {opacity: 0;} /* 없다가 */
+    20% {opacity: 1;} /* 슬라이드해서 나타남 */
+    80% {opacity: 1;} /* 상태 유지 */
+    100% {opacity: 0;} /* 사라짐 */
+}</code></pre>
                                         </div>
                                     </div>
                                 </div>
@@ -1340,7 +1546,7 @@ prefixfree.min.js
                         <div class="right">
                             <h2>Contact Me<br>For More Talk!</h2>
                             <ul>
-                                <li><i class="fa fa-phone"></i>+82 1041819489</li>
+                                <li><i class="fa fa-phone"></i>01041819489</li>
                                 <li><i class="fa fa-envelope-o"></i>sryung1225@gmail.com</li>
                                 <li><i class="fa fa-instagram"></i>@__ryungsmas</li>
                             </ul>
